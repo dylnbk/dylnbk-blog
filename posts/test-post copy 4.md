@@ -1,9 +1,9 @@
 ---
 layout: layouts/post.njk
-title: Third post
-description: test
+title: Test post 5
+description: Just a test
 date: 2022-05-25
 featuredImage: /media/uploads/test.jpg 
 ---
 
-Text for another post is here
+Text for the post is here
