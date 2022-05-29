@@ -6,11 +6,12 @@ pagination:
   data: collections.posts
   size: 5
   alias: posts
+  reverse: true
 ---
 
 <ul>
 
-    {% for post in posts | reverse %}
+    {% for post in posts %}
         <div class="outer">
             <div class="container">
                 <div class="box">
