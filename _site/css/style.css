@@ -5,14 +5,49 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: Inconsolata;
+    src: url('/fonts/Inconsolata-Light.ttf');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Teko;
+    src: url('/fonts/Teko-Regular.ttf');
+    font-weight: 400;
+    font-display: swap;
+}
+
+:root {
+    --a-color: #68f3d5;
+    --b-color: #FFFCF2;
+    --c-color: #ccc5b9;
+    --d-color: #403d39;
+    --e-color: #252422;
+    --black-color: #000000;
+    --white-color: #f4f4f4;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+html::-webkit-scrollbar {
+width: 0px;
+}
+
 body {
     width: 100%;
+    background-color: var(--e-color);
 }
 
 a {
@@ -30,31 +65,71 @@ ol li {
 .heading {
     display: grid;
     place-content: center;
-    font-family: 'Roboto', sans-serif;
-    margin: 5vh 0;
+    font-family: 'Teko', sans-serif;
+    margin: 1vh 0;
+    font-size: 115px;
+    color: var(--a-color);
+    letter-spacing: 10px;
 }
 
 .post-title {
     display: grid;
     place-content: center;
+    font-family: 'Roboto', sans-serif;
+    color: var(--b-color);
+}
+
+.post-title-front {
+    font-family: 'Roboto', sans-serif;
+    color: var(--b-color);
+}
+
+.post-title-front:hover {
+    text-decoration: underline;
+    color: var(--a-color);
 }
 
 .post-date {
     display: grid;
     place-content: center;
     margin-bottom: 5vh; 
+    font-family: 'Inconsolata', monospace;
+    font-size: 13px;
+    line-height: 30px;
+    color: var(--c-color);
+    
+}
+.post-date-front {
+    font-size: 13px;
+    line-height: 30px;
+    font-family: 'Inconsolata', monospace;
+    color: var(--c-color);
 }
 
 .post-content {
     display: grid;
     place-content: center;
     margin: 5vh 0;
+    font-family: 'Inconsolata', monospace;
+    color: var(--b-color);
+    font-size: 20px;
+}
+
+.post-description {
+    font-family: 'Inconsolata', monospace;
+    font-size: 20px;
+    color: var(--b-color);
 }
 
 .box {
     margin: 10px 0;
-    padding: 5px;
-    border: 1px solid black;
+    padding: 10px 5px;
+    border-bottom: 1px solid var(--d-color);
+    transition: .5s all ease-in-out;
+}
+
+.box:hover {
+    box-shadow: var(--black-color) 0px 15px 20px -20px;
 }
   
 .container {
@@ -71,7 +146,19 @@ ol li {
 nav {
     display: grid;
     place-content: center;
-    margin: 10px 0;
+    margin: 50px 0;
+}
+
+#page-nav {
+    font-family: 'Inconsolata', monospace;
+    font-size: 25px;
+    color: var(--d-color);
+}
+
+#page-nav a{
+    font-family: 'Inconsolata', monospace;
+    font-size: 25px;
+    color: var(--c-color);
 }
 
 .featured-image {
@@ -79,6 +166,9 @@ nav {
     margin-left: auto;
     margin-right: auto;
     width: 30%;
+    border: 5px solid var(--d-color);
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -86,7 +176,6 @@ nav {
     .featured-image {
         width: 60%;
     }
-
 }
 
 @media screen and (max-width: 768px) {
@@ -96,17 +185,41 @@ nav {
         min-width: 25rem;
     }
 
+    .heading {
+        font-size: 100px;
+        letter-spacing: 10px;
+    }
 }
 
 @media screen and (max-width: 425px) {
+
+    .container {
+        max-width: 22rem;
+        min-width: 22rem;
+    }
+
+    .featured-image {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    .container {
+        max-width: 19rem;
+        min-width: 19rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
 
     .container {
         max-width: 15rem;
         min-width: 15rem;
     }
 
-    .featured-image {
-        width: 70%;
+    .heading {
+        font-size: 70px;
+        letter-spacing: 8px;
     }
-
 }
