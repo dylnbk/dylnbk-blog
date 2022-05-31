@@ -13,12 +13,21 @@
     </head>
 
     <body>
-        <div>
-            <h1 class="heading">dyln.bk</h1>
+        <div class="videobg">
+          <video autoplay loop muted poster="/media/bluedot.jpg">
+            <source src="/media/uploads/bluedot.mp4" type="video/mp4">
+            <source src="/media/uploads/bluedot.mp4" type="video/webm">
+          </video>
         </div>
+        <div class="outer">
+            <div class="glass">
+                <div>
+                    <h1 class="heading">dyln.bk</h1>
+                </div>
 
-        {{ content | safe }}
-    
+                {{ content | safe }}
+            </div>
+        </div>
     </body>
 
 </html>
