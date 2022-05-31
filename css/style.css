@@ -343,7 +343,8 @@ nav {
     50%{top: 0vh; opacity: .8; left: -30%}
     60%{left: -30%}
     75%{opacity: 1;}
-    100%{top: -90vh; opacity: 0;}
+    85%{opacity: 0;}
+    100%{top: -90vh;}
   }
 
 @media screen and (max-width: 1024px) {
@@ -380,11 +381,15 @@ nav {
     .glass {
         width: 90vw;
         height: 90vh;
+        background-color: transparent;
+        box-shadow: none;
+        backdrop-filter: unset;
+        background: none;
     }
 
     .heading {
         font-size: 50px;
-        margin-top: 3vh;
+        margin-top: 1vh;
     }
 }
 
@@ -396,7 +401,7 @@ nav {
     }
 
     nav {
-        margin-top: 15px;
+        margin-top: 5vh;
     }
 }
 
