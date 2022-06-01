@@ -20,7 +20,7 @@
 }
 
 :root {
-    --a-color: #fcd6f9;
+    --a-color: #fff0fe;
     --b-color: #ffc6fe;
     --c-color: #f6b2ff;
     --d-color: #ceafff;
@@ -78,6 +78,7 @@ ol li {
     display: grid;
     place-content: center;
     font-family: 'Roboto', sans-serif;
+    font-size: xx-large;
     color: var(--b-color);
 }
 
@@ -98,7 +99,7 @@ ol li {
     font-family: 'Inconsolata', monospace;
     font-size: 13px;
     line-height: 30px;
-    color: var(--c-color);
+    color: var(--a-color);
     
 }
 .post-date-front {
@@ -111,9 +112,11 @@ ol li {
 .post-content {
     display: grid;
     place-content: center;
-    margin: 5vh 0;
+    margin: 5vh 5vw;
     font-family: 'Inconsolata', monospace;
-    color: var(--b-color);
+    letter-spacing: -1px;
+    text-shadow: 2px 2px 15px #00000075;
+    color: var(--z-color);
     font-size: 20px;
 }
 
@@ -174,9 +177,9 @@ ol li {
 }
 
 nav {
-    position: absolute;                
-    bottom: 5vh;
-    left: 45vw;   
+    display: grid;
+    justify-content: center;
+    margin-top: 50px;
 }
 
 #page-nav {
@@ -363,7 +366,7 @@ nav {
     50%{top: 0vh; opacity: .8; left: -30%}
     60%{left: -30%}
     75%{opacity: 1;}
-    85%{opacity: 0;}
+    80%{opacity: 0;}
     100%{top: -70vh;}
   }
 
@@ -400,7 +403,6 @@ nav {
 
     .glass {
         width: 100vw;
-        height: 90vh;
         background-color: transparent;
         box-shadow: none;
         backdrop-filter: unset;
@@ -410,18 +412,21 @@ nav {
 
     .heading {
         font-size: 50px;
-        margin-top: -10vh;
+        letter-spacing: 8px;
+        margin-top: -50px;
     }
 
     .left-panel {
-        background-color: transparent;
+        background-color: white;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
         height: 0vh;
+        margin: 20px 0;
     }
 
     .right-panel {
         margin: 0px;
+        height: 80vh;
     }
 
     .box {
@@ -430,8 +435,18 @@ nav {
     }
 
     nav {
-        left: 50%;
-        transform: translate(-50%, -100%);
+        padding-bottom: 40px;
+    }
+
+    .post-title {
+        margin: 0 10%;
+        font-size: x-large;
+        text-align: center;
+    }
+
+    .post-content {
+        margin: 10% 10%;
+        padding-bottom: 20px;
     }
 
 }
@@ -442,10 +457,6 @@ nav {
         max-width: 18rem;
         min-width: 18rem;
     }
-
-    nav {
-        margin-top: 5vh;
-    }
 }
 
 @media screen and (max-width: 320px) {
@@ -453,13 +464,5 @@ nav {
     .container {
         max-width: 15rem;
         min-width: 15rem;
-    }
-
-    .heading {
-        letter-spacing: 8px;
-    }
-
-    nav {
-        transform: translate(-50%, -10%);
     }
 }
