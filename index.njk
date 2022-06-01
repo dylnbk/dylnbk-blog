@@ -29,7 +29,7 @@ pagination:
             </ul>
 
             <nav>
-            <ol class="inline-li" id="page-nav">
+            <ol id="page-nav">
                 <li>{% if page.url != pagination.href.first %}<a href="{{ pagination.href.first }}">⟪</a>{% else %}⟪{% endif %}</li>
                 <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">⟨</a>{% else %}⟨{% endif %}</li>
             {%- for pageEntry in pagination.pages %}
