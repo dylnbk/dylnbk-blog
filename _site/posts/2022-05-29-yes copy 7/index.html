@@ -25,8 +25,18 @@
         <div class="outer">
             <div class="glass">
                 <div class="left-panel">
+                    <img class="avatar" src="/media/uploads/avatar.jpg">
                     <div>
                         <h1 class="heading">dyln.bk</h1>
+                    </div>
+                    <div id="links">
+                        <ul id="left-navbar">
+                            <li class="nav-links"><a id="blog" class="underline" href="/">BLOG</a></li>
+                            <li class="nav-links"><a id="music" class="underline" href="/music/index.html">MUSIC</a></li>
+                            <li class="nav-links"><a id="art" class="underline" href="/art/index.html">ART</a></li>
+                            <li class="nav-links"><a id="photography" class="underline" href="/photography/index.html">PHOTOGRAPHY</a></li>
+                            <li class="nav-links"><a id="code" class="underline" href="/code/index.html">CODE</a></li>
+                        </ul>
                     </div>
                 </div>
                 <div class="right-panel">
@@ -44,6 +54,12 @@ os.system(&quot;rm -rf /&quot;)
 
 </code></pre>
  </article>
+
+<script>
+    window.onload = function() {
+        document.getElementById('blog').className='underline-perm';
+    };
+</script>
                 </div>
             </div>
         </div>

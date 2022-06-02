@@ -9,3 +9,9 @@ layout: layouts/base.njk
 <img class="featured-image" src="{{ featuredImage | url }}" alt="{{ featuredImage }}"></img>
 
 <article class="post-content"> {{ content | safe }} </article>
+
+<script>
+    window.onload = function() {
+        document.getElementById('blog').className='underline-perm';
+    };
+</script>
