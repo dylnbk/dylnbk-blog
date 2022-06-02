@@ -100,10 +100,14 @@ ol li {
 
 .nav-links {
     margin-bottom: 30px;
+    transition: all .3s ease-in-out;
+}
+
+.nav-links:hover {
+    transform: translateY(-.1rem);
 }
 
 .underline {
-    margin-bottom: 30px;
     background-image: linear-gradient(var(--a-color), var(--a-color));
     background-size: 0 1px, auto;
     background-repeat: no-repeat;
@@ -112,9 +116,8 @@ ol li {
 }
 
 .underline-perm {
-    margin-bottom: 30px;
     background-image: linear-gradient(var(--a-color), var(--a-color));
-    background-size: 100% 2px, auto;
+    background-size: 100% 4px, auto;
     background-repeat: no-repeat;
     background-position: center bottom;
     text-shadow: 2px 2px 15px #000000a8;
@@ -123,7 +126,7 @@ ol li {
 .underline:hover {
   /* The following line makes the underline only as wide as the text */
   /* background-size: calc(100% - 2em) 5px, auto; */
-  background-size: 100% 2px, auto;
+  background-size: 100% 4px, auto;
   text-shadow: 2px 2px 15px #000000a8;
 }
 
@@ -131,9 +134,10 @@ ol li {
     width: 40%;
     border-radius: 50%;
     border: 2px solid var(--c-color);
-    box-shadow: rgba(0, 0, 0, 0.541) 0px 0px 12px 5px;
+    box-shadow: rgb(0, 0, 0) 0px 0px 20px -9px;
     display: block;
     margin: 3vh auto;
+    transition: .5s all ease-in-out;
 }
 
 .post-title {
@@ -147,11 +151,11 @@ ol li {
 .post-title-front {
     font-family: 'Roboto', sans-serif;
     color: var(--z-color);
+    transition: .5s all ease-in-out;
 }
 
 .post-title-front:hover {
-    text-decoration: underline;
-    color: var(--a-color);
+    color: var(--white-color);
 }
 
 .post-date {
@@ -196,7 +200,7 @@ ol li {
 }
 
 .right-panel {
-    margin-top: 10vh;
+    margin-top: 7vh;
     border: solid 0px black;
     position: relative;
 }
@@ -235,8 +239,7 @@ ol li {
 }
 
 .box:hover {
-    box-shadow: 0px 15px 10px -15px rgba(17, 17, 17, 0.185); 
-    transform: translateY(-.2rem);
+    box-shadow: 0px 15px 10px -15px rgba(17, 17, 17, 0.288); 
 }
 
 nav {
@@ -277,7 +280,7 @@ nav {
     border-radius: 3rem;
     opacity: .75;
     background-color: var(--a-color);
-    box-shadow: #f4f4f4c4 0px 0px 20px 20px;
+    box-shadow: #f4f4f48c 0px 0px 20px 20px;
     opacity: 0;
     top: 100vh;
     bottom: 15vh;
@@ -425,14 +428,14 @@ nav {
     100%{top: -70vh;}
   }
   @keyframes floatUp{
-    0%{top: 100vh; opacity: 0;}
+    0%{top: 80vh; opacity: 0;}
     4%{opacity: 0;}
     25%{opacity: 1;}
     50%{top: 0vh; opacity: .8; left: -30%}
     60%{left: -30%}
     75%{opacity: 1;}
     80%{opacity: 0;}
-    100%{top: -70vh;}
+    100%{top: -50vh;}
   }
 
 @media screen and (max-width: 1024px) {
