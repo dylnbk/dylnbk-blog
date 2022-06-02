@@ -13,6 +13,13 @@
 }
 
 @font-face {
+    font-family: Inconsolata;
+    src: url('/fonts/Inconsolata-Regular.ttf');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
     font-family: Teko;
     src: url('/fonts/Teko-Regular.ttf');
     font-weight: 400;
@@ -20,14 +27,14 @@
 }
 
 :root {
-    --a-color: #fff0fe;
-    --b-color: #ffc6fe;
-    --c-color: #f6b2ff;
-    --d-color: #ceafff;
-    --e-color: #c19bff;
-    --z-color: #766B87;
+    --a-color: #00ffea;
+    --b-color: #dddddd;
+    --c-color: #b4b4b4;
+    --d-color: #5a5a5a;
+    --e-color: #1b1b1b;
+    --z-color: #3b3b3b;
     --black-color: #000000;
-    --white-color: #f4f4f4;
+    --white-color: #e0dfdf;
 }
 
 * {
@@ -48,11 +55,12 @@ html::-webkit-scrollbar {
 
 body {
     width: 100%;
-    background: radial-gradient(var(--e-color),#00756c9a);
+    background: radial-gradient(var(--d-color),#000000ec);
 }
 
 a {
     text-decoration: none;
+    color: #1b1b1b;
 }
 
 li {
@@ -70,8 +78,62 @@ ol li {
     font-size: 60px;
     color: var(--z-color);
     letter-spacing: 6px;
-    margin-top: 1vh;
     text-shadow: 2px 2px 15px #00000023;
+}
+
+#links {
+    display: grid;
+    place-content: center;
+    text-align: center;
+    font-family: 'Inconsolata', monospace;
+    font-weight: 400;
+    font-size: 25px;
+    color: var(--z-color);
+    text-shadow: 2px 2px 15px #00000023;
+    margin-top: 3vh;
+    
+}
+
+#left-navbar {
+    list-style: none;
+}
+
+.nav-links {
+    margin-bottom: 30px;
+}
+
+.underline {
+    margin-bottom: 30px;
+    background-image: linear-gradient(var(--a-color), var(--a-color));
+    background-size: 0 1px, auto;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    transition: all .5s ease-out;
+}
+
+.underline-perm {
+    margin-bottom: 30px;
+    background-image: linear-gradient(var(--a-color), var(--a-color));
+    background-size: 100% 2px, auto;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    text-shadow: 2px 2px 15px #000000a8;
+}
+
+.underline:hover {
+  /* The following line makes the underline only as wide as the text */
+  /* background-size: calc(100% - 2em) 5px, auto; */
+  background-size: 100% 2px, auto;
+  text-shadow: 2px 2px 15px #000000a8;
+}
+
+.avatar {
+    width: 40%;
+    border-radius: 50%;
+    border: 2px solid var(--c-color);
+    box-shadow: rgba(0, 0, 0, 0.541) 0px 0px 12px 5px;
+    display: block;
+    margin: 3vh auto;
 }
 
 .post-title {
@@ -79,12 +141,12 @@ ol li {
     place-content: center;
     font-family: 'Roboto', sans-serif;
     font-size: xx-large;
-    color: var(--b-color);
+    color: var(--z-color);
 }
 
 .post-title-front {
     font-family: 'Roboto', sans-serif;
-    color: var(--b-color);
+    color: var(--z-color);
 }
 
 .post-title-front:hover {
@@ -116,18 +178,18 @@ ol li {
     font-family: 'Inconsolata', monospace;
     letter-spacing: -1px;
     text-shadow: 2px 2px 15px #00000075;
-    color: var(--z-color);
+    color: var(--e-color);
     font-size: 20px;
 }
 
 .post-description {
     font-family: 'Inconsolata', monospace;
     font-size: 20px;
-    color: var(--z-color);
+    color: var(--b-color);
 }
 
 .left-panel {
-    background-color: var(--a-color);
+    background-color: var(--white-color);
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
     height: 80vh;
@@ -136,6 +198,7 @@ ol li {
 .right-panel {
     margin-top: 10vh;
     border: solid 0px black;
+    position: relative;
 }
 
 .outer {
@@ -179,7 +242,9 @@ ol li {
 nav {
     display: grid;
     justify-content: center;
-    margin-top: 50px;
+    position: absolute;
+    margin-left: 50px;
+    bottom: 4vh;
 }
 
 #page-nav {

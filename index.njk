@@ -39,3 +39,8 @@ pagination:
                         <li>{% if page.url != pagination.href.last %}<a href="{{ pagination.href.last }}">⟫</a>{% else %}⟫{% endif %}</li>
                     </ol>
                     </nav>
+                    <script>
+                        window.onload = function() {
+                            document.getElementById('blog').className='underline-perm';
+                        };
+                    </script>
