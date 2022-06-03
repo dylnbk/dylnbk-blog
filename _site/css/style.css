@@ -78,7 +78,7 @@ ol li {
     font-size: 60px;
     color: var(--z-color);
     letter-spacing: 6px;
-    text-shadow: 2px 2px 15px #00000023;
+    text-shadow: 2px 2px 15px #00000065;
 }
 
 #links {
@@ -105,6 +105,29 @@ ol li {
 
 .nav-links:hover {
     transform: translateY(-.1rem);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 3vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+    
+}
+
+#icons {
+    width: 32px;
+    filter: invert(18%) sepia(7%) saturate(0%) hue-rotate(197deg) brightness(91%) contrast(79%);
+    margin: 0 7px; 
+    transition: all .5s ease-in-out;  
+}
+
+#icons:hover {
+    transform: scale(1.2);
+    filter: invert(83%) sepia(97%) saturate(2511%) hue-rotate(93deg) brightness(100%) contrast(105%);
 }
 
 .underline {
@@ -197,6 +220,7 @@ ol li {
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
     height: 80vh;
+    position: relative;
 }
 
 .right-panel {
