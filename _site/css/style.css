@@ -226,7 +226,7 @@ ol li {
 
 .front-image {
     width: 100%;
-    border: 1px solid var(--b-color);
+    border: 1px solid var(--c-color);
     transition: all .5s ease-in-out;
     filter: brightness(80%);
 }
