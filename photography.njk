@@ -1,9 +1,17 @@
 ---
 title: dylnbk.page
 layout: layouts/base.njk
+eleventyExcludeFromCollections: true
 ---
+<ul class="post-panel-front">
 
+    {% for pic in collections.photos | reverse %}
+        <div class="container">
+            <a href="{{ pic.url | url }}"><img class="front-image" src="{{ pic.data.photoImage }}" alt="{{ photoImage }}"></img></a>
+        </div>
+    {% endfor %}
 
+</ul>
 
 <script>
     window.onload = function() {

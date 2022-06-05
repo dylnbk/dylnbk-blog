@@ -2,13 +2,15 @@
 layout: layouts/base.njk
 ---
 
-<h2 class="post-title">{{ title }}</h2>
+<div class="post-panel">
+    <h2 class="post-title">{{ title }}</h2>
 
-<h3 class="post-date">{{ date | readableDate }}</h3>
+    <h3 class="post-date">{{ date | readableDate }}</h3>
 
-<img class="featured-image" src="{{ featuredImage | url }}" alt="{{ featuredImage }}"></img>
+    <img class="featured-image" src="{{ featuredImage | url }}" alt="{{ featuredImage }}"></img>
 
-<article class="post-content"> {{ content | safe }} </article>
+    <article class="post-content"> {{ content | safe }} </article>
+</div>
 
 <script>
     window.onload = function() {

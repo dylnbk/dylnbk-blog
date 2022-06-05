@@ -1,24 +1,19 @@
 ---
 title: dylnbk.page
 layout: layouts/base.njk
-eleventyExcludeFromCollections: true
-pagination:
-  data: collections.posts
-  size: 4
-  alias: posts
-  reverse: true
 ---
         
-                    <ul>
+                    <ul class="post-panel-front">
 
-                        {% for post in posts %}
+                        {% for post in collections.posts | reverse %}
                                 <div class="container">
                                     <div class="box">
                                         <h2>
                                             <a class="post-title-front" href="{{ post.url | url }}">{{ post.data.title }}</a>
                                         </h2>
-                                        <time class="post-date-front" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-                                        <br>
+                                        <div style="padding-bottom: 10px;">
+                                            <time class="post-date-front" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+                                        </div>
                                         <span class="post-description">
                                             {{ post.data.description }}
                                         </span>
@@ -27,18 +22,6 @@ pagination:
                         {% endfor %}
 
                     </ul>
-
-                    <nav>
-                    <ol id="page-nav">
-                        <li>{% if page.url != pagination.href.first %}<a href="{{ pagination.href.first }}">⟪</a>{% else %}⟪{% endif %}</li>
-                        <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">⟨</a>{% else %}⟨{% endif %}</li>
-                    {%- for pageEntry in pagination.pages %}
-                        <li><a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>{{ loop.index }}</a></li>
-                    {%- endfor %}
-                        <li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">⟩</a>{% else %}⟩{% endif %}</li>
-                        <li>{% if page.url != pagination.href.last %}<a href="{{ pagination.href.last }}">⟫</a>{% else %}⟫{% endif %}</li>
-                    </ol>
-                    </nav>
                     <script>
                         window.onload = function() {
                             document.getElementById('blog').className='underline-perm';
