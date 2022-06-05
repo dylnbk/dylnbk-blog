@@ -239,13 +239,17 @@ ol li {
     transform: translateY(-.2rem);
 }
 
+#photo-center {
+    margin: 0 auto;
+}
+
 .row {
     display: -ms-flexbox; /* IE10 */
     display: flex;
     -ms-flex-wrap: wrap; /* IE10 */
     flex-wrap: wrap;
     padding: 0 4px;
-    margin-right: 3vw;
+    margin: 0 5px;
 }
   
 /* Create four equal columns that sits next to each other */
@@ -270,7 +274,7 @@ ol li {
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
     height: 80vh;
-    width: 300px;
+    min-width: 300px;
     position: relative;
 }
 
@@ -303,7 +307,7 @@ ol li {
 }
 
 .container {
-    width: 60vw;
+    visibility: visible;
 }
 
 .box {

@@ -4,16 +4,18 @@ layout: layouts/base.njk
 ---
 
 <ul class="post-panel-front">
-    <div class="row">
-        {% for pics in collections.photos | slice(4) %}
-            <ul class="column">
-            {% for pic in pics | reverse %}
-                <div>
-                    <a href="{{ pic.url | url }}"><img class="front-image" src="{{ pic.data.photoImage }}" alt="{{ photoImage }}"></img></a>
-                </div>
+    <div id="photo-center">
+        <div class="row">
+            {% for pics in collections.photos | slice(4) %}
+                <ul class="column">
+                {% for pic in pics | reverse %}
+                    <div>
+                        <a href="{{ pic.url | url }}"><img class="front-image" src="{{ pic.data.photoImage }}" alt="{{ photoImage }}"></img></a>
+                    </div>
+                {% endfor %}
+                </ul>
             {% endfor %}
-            </ul>
-        {% endfor %}
+        </div>
     </div>
 </ul>
 
