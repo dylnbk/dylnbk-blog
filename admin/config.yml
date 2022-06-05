@@ -20,19 +20,19 @@ collections:
       - { label: "Featured Image", name: "featuredImage", widget: "image" }
     
   - name: "photos"
-  label: "Photos"
-  folder: "photo_gallery"
-  create: true
-  fields:
-    - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/photo.njk"}
-    - { label: "Post", name: "body", widget: "markdown" }
-    - { label: "Photo", name: "photoImage", widget: "image" }
+    label: "Photos"
+    folder: "photo_gallery"
+    create: true
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/photo.njk"}
+      - { label: "Post", name: "body", widget: "markdown" }
+      - { label: "Photo", name: "photoImage", widget: "image" }
 
   - name: "art"
-  label: "Art"
-  folder: "art_gallery"
-  create: true
-  fields:
-    - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/art.njk"}
-    - { label: "Post", name: "body", widget: "markdown" }
-    - { label: "Art, name: "artImage", widget: "image" }
+    label: "Art"
+    folder: "art_gallery"
+    create: true
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/art.njk"}
+      - { label: "Post", name: "body", widget: "markdown" }
+      - { label: "Art, name: "artImage", widget: "image" }
