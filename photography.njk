@@ -2,14 +2,19 @@
 title: dylnbk.page
 layout: layouts/base.njk
 ---
+
 <ul class="post-panel-front">
-
-    {% for pic in collections.photos | reverse %}
-        <div class="container">
-            <a href="{{ pic.url | url }}"><img class="front-image" src="{{ pic.data.photoImage }}" alt="{{ photoImage }}"></img></a>
-        </div>
-    {% endfor %}
-
+    <div class="row">
+        {% for pics in collections.photos | slice(4) %}
+            <ul class="column">
+            {% for pic in pics | reverse %}
+                <div>
+                    <a href="{{ pic.url | url }}"><img class="front-image" src="{{ pic.data.photoImage }}" alt="{{ photoImage }}"></img></a>
+                </div>
+            {% endfor %}
+            </ul>
+        {% endfor %}
+    </div>
 </ul>
 
 <script>
