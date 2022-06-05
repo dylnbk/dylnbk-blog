@@ -35,4 +35,4 @@ collections:
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/art.njk"}
       - { label: "Post", name: "body", widget: "markdown" }
-      - { label: "Art, name: "artImage", widget: "image" }
+      - { label: "Art", name: "artImage", widget: "image" }
