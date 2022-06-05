@@ -226,10 +226,10 @@ ol li {
 
 .front-image {
     display: block;
-    margin: 0px auto;
+    margin-left: 5vw;
     margin-bottom: 100px;
     margin-top: 10px;
-    width: 80%;
+    max-width: 80%;
     border: 2px solid var(--b-color);
     border-radius: 1rem;
     transition: all 1s ease-in-out;
@@ -237,7 +237,8 @@ ol li {
 
 
 .front-image:hover {
-    opacity: .3;
+    opacity: .5;
+    filter: blur(1px);
 }
 
 

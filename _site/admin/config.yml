@@ -25,7 +25,6 @@ collections:
     create: true
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/photo.njk"}
-      - { label: "Post", name: "body", widget: "markdown" }
       - { label: "Photo", name: "photoImage", widget: "image" }
 
   - name: "art"
@@ -34,5 +33,4 @@ collections:
     create: true
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/art.njk"}
-      - { label: "Post", name: "body", widget: "markdown" }
       - { label: "Art", name: "artImage", widget: "image" }
