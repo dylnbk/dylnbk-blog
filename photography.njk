@@ -20,9 +20,9 @@ layout: layouts/base.njk
 </ul>
 
 <div class="grid-change">
-    <button class="btn" onclick="one()">⋮</button>
-    <button class="btn active" onclick="two()">⋮⋮</button>
-    <button class="btn" onclick="four()">⋮⋮⋮</button>
+    <button class="btn" onclick="one()"><img id="icons-layout" src="/fonts/layout-one.svg"></img></button>
+    <button class="btn" onclick="two()"><img id="icons-layout" src="/fonts/layout-two.svg"></img></button>
+    <button class="btn active" onclick="four()"><img id="icons-layout" src="/fonts/layout-three.svg"></img></button>
 </div>
 <script>
 
@@ -58,6 +58,15 @@ layout: layouts/base.njk
         elements[i].style.msFlex = "25%";  // IE10
         elements[i].style.flex = "25%";
         }
+    }
+
+    var btns = document.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+        });
     }
 
 </script>

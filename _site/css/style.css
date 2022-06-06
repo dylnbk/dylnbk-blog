@@ -31,7 +31,7 @@
     --b-color: #dddddd;
     --c-color: #b4b4b4;
     --d-color: #5a5a5a;
-    --e-color: #1b1b1b;
+    --e-color: #2b2b2b;
     --z-color: #3b3b3b;
     --black-color: #000000;
     --white-color: #e0dfdf;
@@ -120,7 +120,7 @@ ol li {
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: 1.5vh;
+    bottom: 1vh;
     left: 50%;
     transform: translate(-50%, 0);
     
@@ -181,7 +181,7 @@ ol li {
 
 .post-title-front {
     font-family: 'Roboto', sans-serif;
-    color: var(--z-color);
+    color: var(--e-color);
     transition: .5s all ease-in-out;
 }
 
@@ -267,22 +267,34 @@ ol li {
     align-items: center;
     position: absolute;
     bottom: 1vh;
-    left: 49.5%;
+    left: 49%;
     transform: translate(-50%, 0);
 }
 
 .btn {
     all: unset;
     cursor: pointer;
-    margin: 0 1vw;
+    margin: 0 10px;
     text-align: center;
-    color: var(--b-color);
+    color: var(--c-color);
     font-size: 20px;
     transition: all .5s ease-in-out;  
 }
 
-.btn:hover {
-    color: var(--a-color);
+.btn.active {
+    transform: scale(1.1);
+    filter: brightness(0) saturate(100%) invert(83%) sepia(97%) saturate(2511%) hue-rotate(143deg) brightness(100%) contrast(105%);
+}
+
+#icons-layout {
+    width: 18px;
+    filter: invert(84%) sepia(0%) saturate(0%) hue-rotate(175deg) brightness(45%) contrast(86%);
+    transition: all .5s ease-in-out;  
+}
+
+#icons-layout:hover {
+    transform: scale(1.1);
+    filter: invert(83%) sepia(97%) saturate(2511%) hue-rotate(93deg) brightness(100%) contrast(105%);
 }
 
 /* =============================================================== */
