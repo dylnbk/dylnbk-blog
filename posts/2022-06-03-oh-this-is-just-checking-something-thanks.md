@@ -6,11 +6,32 @@ date: 2022-06-02T23:00:00.000Z
 featuredImage: /media/uploads/test.jpg
 ---
 ```python
-def test():
 
-    somecode = "test"
+    def test():
 
-    print(somecode)
+        somecode = "test"
 
-test()
+        print(somecode)
+        print(somecode)
+        print(somecode)
+        print(somecode)
+        print(somecode)
+        print(somecode)
+        print(somecode)
+        print(somecode)
+        print(somecode)
+        print(somecode)
+        print(somecode)
+        print(somecode)
+        print(somecode)
+        print(somecode)
+        print(somecode)
+        print(somecode)
+        print(somecode)
+        print(somecode)
+        print(somecode)
+        print(somecode)
+
+
+    test()
 ```
