@@ -46,3 +46,11 @@ collections:
       - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/art.njk"}
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Art Video", name: "artVideo", widget: "file" }
+
+  - name: "music"
+    label: "Music"
+    folder: "music_gallery"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Music", name: "music", widget: "file" }
