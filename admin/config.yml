@@ -2,12 +2,13 @@ backend:
   name: git-gateway
   branch: master
 
+publish_mode: editorial_workflow
 media_folder: "_site/media/uploads"
 public_folder: "/media/uploads"
 
 collections:
   - name: "posts"
-    label: "Posts"
+    label: "Post"
     folder: "posts"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     create: true
@@ -20,11 +21,12 @@ collections:
       - { label: "Featured Image", name: "featuredImage", widget: "image" }
     
   - name: "photos"
-    label: "Photos"
+    label: "Photo"
     folder: "photo_gallery"
     create: true
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/photo.njk"}
+      - { label: "Title", name: "title", widget: "string" }
       - { label: "Photo", name: "photoImage", widget: "image" }
 
   - name: "art"
@@ -33,4 +35,14 @@ collections:
     create: true
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/art.njk"}
-      - { label: "Art", name: "artImage", widget: "image" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Art Image", name: "artImage", widget: "image" }
+  
+  - name: "video"
+    label: "Video"
+    folder: "art_gallery/videos"
+    create: true
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/art.njk"}
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Art Video", name: "artVideo", widget: "file" }
