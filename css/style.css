@@ -415,7 +415,7 @@ label {
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: -8px;
+    bottom: 0px;
     left: 49%;
     transform: translate(-50%, 0);
 }
