@@ -220,7 +220,6 @@ ol li {
 .post-description {
     font-family: 'Inconsolata', monospace;
     font-size: 20px;
-
     color: var(--b-color);
 }
 
@@ -327,8 +326,105 @@ audio {
 }
 
 audio::-webkit-media-controls-enclosure {
-    background-color: rgba(255, 255, 255, 0);
+    background-color: transparent;
 }
+
+.contact-header {
+    margin: 5vh 0;
+    font-family: 'Roboto', sans-serif;
+    color: var(--e-color);
+    font-size: 45px;
+}
+
+.contact {
+    text-align: center;
+}
+
+label {
+    font-size: 22px;
+    display: block;
+    position: relative;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    font-family: 'Inconsolata', monospace;
+    font-size: 25px;
+    color: var(--e-color);
+}
+
+.message {
+    width: 50%;
+    height: 20vh;
+    margin-bottom: 20px;
+    resize: vertical;
+    color: var(--b-color);
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--d-color);
+    transition: 1s box-shadow;
+    outline: none; 
+    transition: 1s ease-in-out;
+  }
+  
+.email {
+    width: 50%;
+    height: 25px;
+    margin-bottom: 20px;
+    color: var(--b-color);
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--d-color);
+    outline: none; 
+    transition: 1s ease-in-out;
+}
+
+.name {
+    width: 50%;
+    height: 25px;
+    margin-bottom: 20px;
+    color: var(--b-color);
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--d-color);
+    outline: none; 
+    transition: 1s ease-in-out;
+}
+  
+.name:hover {
+    border-bottom: 1px solid var(--a-color);
+}
+
+.message:hover {
+    border-bottom: 1px solid var(--a-color);
+}
+  
+.email:hover {
+    border-bottom: 1px solid var(--a-color);
+}
+
+.btncontact {
+
+    background: transparent;
+    color: rgba(255, 255, 255, 0.702);
+    border: none;
+    font-size: 27px;
+    animation: bouncy 5s infinite linear;
+    transition: all .5s ease-in-out;
+    padding: 5px 15px 5px 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -8px;
+    left: 49%;
+    transform: translate(-50%, 0);
+}
+  
+.btncontact:hover {
+    color: var(--a-color);
+    cursor: pointer;
+}
+
 
 /* =============================================================== */
 
@@ -342,7 +438,7 @@ audio::-webkit-media-controls-enclosure {
 }
 
 .right-panel {
-    border: solid 1px rgba(92, 92, 92, 0.253);
+    border: solid 1px var(--z-color);
     border-top-right-radius: 1rem; 
     border-bottom-right-radius: 1rem; 
     position: relative;
@@ -389,8 +485,8 @@ audio::-webkit-media-controls-enclosure {
 
 .post-panel-front {
     height: 80vh;
-    border-top: solid 1px rgba(92, 92, 92, 0.151);
-    border-bottom: solid 1px rgba(92, 92, 92, 0.158);
+    border-top: solid 1px var(--z-color);
+    border-bottom: solid 1px var(--z-color);
     box-shadow: 
         inset 0px 11px 8px -10px rgba(0, 0, 0, 0.199),
         inset 0px -11px 8px -10px rgba(0, 0, 0, 0.212); 

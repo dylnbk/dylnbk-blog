@@ -2,7 +2,33 @@
 title: dylnbk.page
 layout: layouts/base.njk
 ---
+<div class="post-panel-front">
+    <div class="contact">
+        <h1 class="contact-header">Get in touch</h1>
+        <form name="contact" autocomplete="off" method="POST" data-netlify="true" action="/success/index.html">
+            <p>
+                <label>Name: </label>
+                <input class="name" type="text" name="name" autocomplete="off"></input>
+            </p>
+            <p>
+                <label>Email: </label>
+                <input class="email" type="email" name="email" role="presentation" autocomplete="off" required></input>
+            </p>
+            <p>
+                <label>Message: </label>
+                <textarea class="message" name="message" required></textarea>
+            </p>
+            
+        </form>
+    </div>
 
+</div>
+
+<nav>
+    <p>
+        <button class="btncontact" type="submit">✉</button>
+    </p>
+</nav>
 
 
 <script>

@@ -14,7 +14,7 @@ pagination:
     {% for track in music %}
         <div class="container">
             <div class="box">
-                <h2 class="post-title-front">{{ track.data.title }}</h2>
+                <h2 class="post-title-front" style="margin-bottom: 15px;">{{ track.data.title }}</h2>
                 <audio controls>
                     <source src="{{ track.data.music }}" type="audio/wav">
                 Your browser does not support the audio element.
