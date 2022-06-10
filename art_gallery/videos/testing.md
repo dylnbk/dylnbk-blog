@@ -1,4 +1,4 @@
 ---
 layout: layouts/art.njk
-artVideo: /media/uploads/bluedot.mp4
+artVideo: /media/uploads/der.mp4
 ---

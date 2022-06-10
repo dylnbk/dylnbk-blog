@@ -3,13 +3,17 @@ layout: layouts/base.njk
 ---
 
 <div class="post-panel-front">
-    <h2 class="post-title">{{ title }}</h2>
-
-    <h3 class="post-date">{{ date | readableDate }}</h3>
-
-    <img class="featured-image" src="{{ featuredImage | url }}" alt="{{ featuredImage }}"></img>
-
-    <article class="post-content"> {{ content | safe }} </article>
+    <div class="blog-post-page">
+        <div class="blog-post-top">
+            <div>
+                <img class="featured-image" src="{{ featuredImage | url }}" alt="{{ featuredImage }}"></img>
+            </div>
+            <div>
+                <h2 class="post-title">{{ title }}</h2>
+            </div>
+        </div>
+        <article class="post-content"> {{ content | safe }} </article>
+    </div>
 </div>
 <nav>
     <a href="/">&#10229;</a>

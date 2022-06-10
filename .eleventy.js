@@ -1,3 +1,5 @@
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("media");
     eleventyConfig.addPassthroughCopy("admin");
@@ -5,6 +7,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addWatchTarget("css");
     eleventyConfig.addPassthroughCopy("fonts");
     eleventyConfig.addWatchTarget("fonts");
+    eleventyConfig.addPlugin(syntaxHighlight);
 
     const {
         DateTime
