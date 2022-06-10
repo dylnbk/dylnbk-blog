@@ -1,7 +1,7 @@
 ---
 layout: layouts/post.njk
-title: Oh this is just checking something thanks
-description: Testing the posting functionality again, making sure everything is working okay
+title: Coding a basic game in Python
+description: Some code I wrote to play the game hangman.
 date: 2022-06-02T23:00:00.000Z
 featuredImage: /media/uploads/test.jpg
 ---
