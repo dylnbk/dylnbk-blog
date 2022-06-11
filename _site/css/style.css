@@ -397,6 +397,7 @@ label {
     font-family: 'Inconsolata', monospace;
     font-size: 20px;
     width: 60%;
+    max-width: 90vw;
     height: 25vh;
     margin-bottom: 20px;
     resize: horizontal;
@@ -512,6 +513,18 @@ label {
     grid-template-columns: 1fr 4fr;
     height: 90vh;
     width: 80vw;
+    animation: fadeInAnimation ease .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .container {
@@ -718,6 +731,74 @@ label {
 }
 
 @media screen and (max-width: 768px) {
+
+    body {
+        background: var(--d-color);
+    }
+
+    nav {
+        bottom: -5vh;
+        padding: 1vh;
+    }
+
+    #links {
+        margin-top: auto;
+    }
+
+    .box {
+        border-bottom: solid 1px var(--z-color);
+    }
+
+    .contact {
+        box-shadow: none;
+        background-color: var(--d-color);
+    }
+
+    .contact:hover {
+        box-shadow: none;
+    }
+
+    .message {
+        height: 20vh;
+    }
+
+    .outer {
+        background: var(--d-color);
+    }
+
+    .glass {
+        grid-template-columns: 1fr;
+        background: var(--d-color);
+        box-shadow: none;
+    }
+
+    .left-panel {
+        margin-top: 35vh;
+        height: 50vh;
+        width: 100vw;
+        border-radius: 0px;
+    }
+
+    .right-panel {
+        background: var(--d-color);
+        border-radius: 0px;
+    }
+
+    .post-panel-front {
+        border: none;
+    }
+
+    .right-panel {
+        border: none;
+    }
+
+    .avatar {
+        display: none;
+    }
+
+    .light {
+        display: none;
+    }
 
 }
 
