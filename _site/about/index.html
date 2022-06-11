@@ -24,10 +24,10 @@
         <div class='light x9'></div>
         <div class="outer">
             <div class="glass">
-                <div class="left-panel">
+                <div id="left-panel">
                     <img class="avatar" src="/media/uploads/avatar.jpg">
                     <div>
-                        <h1 class="heading">dyln.bk</h1>
+                        <h1 class="heading">dyln.bk<span class="menu-mobile" onclick="openMenu()">☰</span></h1>
                     </div>
                     <div id="links">
                         <ul id="left-navbar">
@@ -38,7 +38,7 @@
                             <li class="nav-links"><a id="contact" class="underline" href="/contact/index.html">CONTACT</a></li>
                         </ul>                        
                     </div>
-                    <div class="social-links">
+                    <div id="social-links">
                         <a href="https://www.instagram.com/dyln.bk/"><img id="icons" src="/fonts/icon-instagram.svg"></img></a>
                         <a href="https://flic.kr/s/aHBqjzJ6i7"><img id="icons" src="/fonts/icon-flickr.svg"></img></a>
                         <a href="https://www.deviantart.com/dylnbk"><img id="icons" src="/fonts/icon-deviantart.svg"></img></a>
@@ -63,6 +63,26 @@
                 </div>
             </div>
         </div>
+        <script>
+            function openMenu() {
+
+                var x = document.getElementById("left-panel");
+                var y = document.getElementById("links");
+                var z = document.getElementById("social-links");
+
+                if(window.innerWidth < 768) {
+                    if (y.style.visibility === "visible") {
+                        y.style.visibility = "hidden";
+                        z.style.visibility = "hidden";
+                        x.style.height = "80px";
+                    } else {
+                        y.style.visibility = "visible";
+                        z.style.visibility = "visible";
+                        x.style.height = "350px";
+                    }
+                }
+            }
+        </script>
     </body>
 
 </html>
