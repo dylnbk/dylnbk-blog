@@ -227,24 +227,49 @@
             </div>
         </div>
         <script>
+
             function openMenu() {
 
                 var x = document.getElementById("left-panel");
                 var y = document.getElementById("links");
                 var z = document.getElementById("social-links");
 
-                if(window.innerWidth < 768) {
-                    if (y.style.visibility === "visible") {
-                        y.style.visibility = "hidden";
-                        z.style.visibility = "hidden";
-                        x.style.height = "80px";
-                    } else {
-                        y.style.visibility = "visible";
-                        z.style.visibility = "visible";
-                        x.style.height = "350px";
-                    }
+                if (y.style.visibility === "visible") {
+                    y.style.visibility = "hidden";
+                    z.style.visibility = "hidden";
+                    x.style.height = "80px";
+                } else {
+                    y.style.visibility = "visible";
+                    z.style.visibility = "visible";
+                    x.style.height = "350px";
                 }
             }
+
+            function checkScreen(a) {
+
+                var x = document.getElementById("left-panel");
+                var y = document.getElementById("links");
+                var z = document.getElementById("social-links");
+                
+                if (a.matches) {
+                    
+                    y.style.visibility = "visible";
+                    z.style.visibility = "visible";
+                    x.style.height = "90vh";
+
+                } else {
+
+                    y.style.visibility = "hidden";
+                    z.style.visibility = "hidden";
+                    x.style.height = "80px";
+
+                }
+            }
+
+            var a = window.matchMedia("(min-width: 768px)")
+            checkScreen(a)
+            a.addListener(checkScreen)
+
         </script>
     </body>
 
