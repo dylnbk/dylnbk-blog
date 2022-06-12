@@ -44,28 +44,32 @@
     margin: 0;
 }
 
-*::-webkit-scrollbar,
-*::-webkit-scrollbar-thumb {
+::-webkit-scrollbar,
+::-webkit-scrollbar-thumb {
   width: 25px;
   border-radius: 25px;
   background-clip: padding-box;
   border: 10px solid transparent;
 }
 
-*::-webkit-scrollbar-thumb {        
+::-webkit-scrollbar-thumb {        
   box-shadow: inset 0 0 0 10px #0f0f0f28;
 }
 
 html {
     scroll-behavior: smooth;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
 }
 
 body {
     width: 100%;
     background: radial-gradient(var(--d-color),#000000ec);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
+
+body::-webkit-scrollbar {
+    display: none;
+  }
 
 a {
     text-decoration: none;
@@ -100,7 +104,6 @@ ol li {
     color: var(--z-color);
     text-shadow: 2px 2px 15px #00000023;
     margin-top: 2vh;
-    
 }
 
 #left-navbar {
@@ -124,7 +127,6 @@ ol li {
     bottom: 1vh;
     left: 50%;
     transform: translate(-50%, 0);
-    
 }
 
 #icons {
@@ -507,7 +509,13 @@ label {
 .outer {
     place-content: center;
     display: grid;
-    height: 100vh
+    height: 100vh;
+    -ms-overflow-style: auto;  /* IE and Edge */
+    scrollbar-width: auto;  /* Firefox */
+}
+
+.outer::-webkit-scrollbar {
+    visibility: visible;
 }
 
 .glass {
@@ -772,6 +780,7 @@ label {
     .contact {
         box-shadow: none;
         background-color: var(--d-color);
+        margin-top: 1vh;
     }
 
     .contact:hover {
@@ -780,6 +789,10 @@ label {
 
     .message {
         height: 20vh;
+    }
+
+    .btncontact {
+        bottom: 3vh;
     }
 
     .outer {
