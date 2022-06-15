@@ -20,7 +20,7 @@
 }
 
 @font-face {
-    font-family: MPlus;
+    font-family: Nunito;
     src: url('/fonts/NunitoSans-Regular.ttf');
     font-weight: 400;
     font-display: swap;
@@ -269,7 +269,7 @@ ol li {
     display: grid;
     place-content: center;
     padding: 5vh 5vw;
-    font-family: 'MPlus';
+    font-family: 'Nunito';
     font-weight: 400;
     color: var(--black-color);
     font-size: 1rem;
@@ -937,13 +937,7 @@ pre[class*="language-"] {
 
 /* =================================== */
 
-
-
-@media screen and (max-width: 1024px) {
-
-}
-
-@media screen and (max-width: 768px), (max-height: 768px) {
+@media screen and (max-width: 1023px), (max-height: 768px) {
 
     body {
         background: var(--d-color);
