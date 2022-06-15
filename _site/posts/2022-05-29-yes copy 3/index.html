@@ -54,7 +54,7 @@
             <div>
                 <img class="featured-image" src="/media/uploads/test.jpg" alt="/media/uploads/test.jpg"></img>
             </div>
-            <div>
+            <div class="title-box">
                 <h2 class="post-title">yes 6</h2>
             </div>
         </div>
@@ -116,9 +116,9 @@
                 }
             }
 
-            var a = window.matchMedia("(min-width: 769px)")
-            checkScreen(a)
-            a.addListener(checkScreen)
+            var a = window.matchMedia("(min-width: 769px) and (min-height: 769px)");
+            checkScreen(a);
+            a.addListener(checkScreen);
 
         </script>
     </body>

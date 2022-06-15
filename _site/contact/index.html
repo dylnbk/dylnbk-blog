@@ -123,9 +123,9 @@
                 }
             }
 
-            var a = window.matchMedia("(min-width: 769px)")
-            checkScreen(a)
-            a.addListener(checkScreen)
+            var a = window.matchMedia("(min-width: 769px) and (min-height: 769px)");
+            checkScreen(a);
+            a.addListener(checkScreen);
 
         </script>
     </body>

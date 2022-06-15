@@ -13,6 +13,20 @@
 }
 
 @font-face {
+    font-family: Glitch;
+    src: url('/fonts/ZillaSlabHighlight-Bold.ttf');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: MPlus;
+    src: url('/fonts/NunitoSans-Regular.ttf');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
     font-family: Inconsolata;
     src: url('/fonts/Inconsolata-Light.ttf');
     font-weight: 300;
@@ -189,7 +203,7 @@ ol li {
 }
 
 .blog-post-page:hover {
-    background-color: var(--d-color);
+    background-color: #85858591;
 }
 
 .blog-post-top {
@@ -198,9 +212,17 @@ ol li {
     max-height: 350px;
     grid-template-columns: 1fr 1fr;
     background-color: var(--white-color);
-    border-bottom: solid 1px var(--d-color);
     box-shadow: rgba(0, 0, 0, 0.349) 0px 10px 30px 8px;
     overflow: hidden;
+}
+
+.title-box {
+    background-color: var(--e-color);
+    transition: all .5s ease-in-out;
+}
+
+.title-box:hover {
+    filter: invert(100%);
 }
 
 .post-title {
@@ -208,10 +230,10 @@ ol li {
     top: 50%;
     transform: translateY(-50%);
     text-align: center;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    font-size: 40px;
-    color: var(--e-color);
+    font-family: 'Glitch';
+    font-size: 70px;
+    color: var(--c-color);
+    text-shadow: 2px 2px 10px #00000069;
     padding: 2vh 2vw;
 }
 
@@ -247,11 +269,11 @@ ol li {
     display: grid;
     place-content: center;
     padding: 5vh 5vw;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'MPlus';
     font-weight: 400;
-    text-shadow: 2px 2px 15px #00000075;
     color: var(--black-color);
-    font-size: 20px;
+    font-size: 1rem;
+    text-shadow: 2px 2px 10px #0000001c;
 }
 
 .post-description {
@@ -751,6 +773,11 @@ label {
     }
 }
 
+@keyframes titleAnimation {
+    0% { filter: invert(0%); }
+    50% { filter: invert(100%); }
+    100% { filter: invert(0%); }
+}
 
 
 /* ===== syntax highlighting with PrismJS ===== */
@@ -916,7 +943,7 @@ pre[class*="language-"] {
 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px), (max-height: 768px) {
 
     body {
         background: var(--d-color);
@@ -1017,6 +1044,10 @@ pre[class*="language-"] {
         grid-template-columns: auto;
         box-shadow: none;
         background-color: transparent;
+    }
+
+    .blog-post-page:hover {
+        background-color: var(--d-color);
     }
 
     .right-panel {
