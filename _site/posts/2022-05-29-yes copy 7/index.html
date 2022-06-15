@@ -82,14 +82,14 @@
                 var y = document.getElementById("links");
                 var z = document.getElementById("social-links");
 
-                if (y.style.visibility === "visible") {
-                    y.style.visibility = "hidden";
-                    z.style.visibility = "hidden";
+                if (y.style.display === "block") {
+                    y.style.display = "none";
+                    z.style.display = "none";
                     x.style.height = "80px";
-                    x.style.transition = "1s ease-in"; 
+                    x.style.transition = ".3s ease-in"; 
                 } else {
-                    y.style.visibility = "visible";
-                    z.style.visibility = "visible";
+                    y.style.display = "block";
+                    z.style.display = "flex";
                     x.style.height = "350px";
                     x.style.transition = "0s"; 
                 }
@@ -103,14 +103,14 @@
                 
                 if (a.matches) {
                     
-                    y.style.visibility = "visible";
-                    z.style.visibility = "visible";
+                    y.style.display = "block";
+                    z.style.display = "flex";
                     x.style.height = "90vh";
 
                 } else {
 
-                    y.style.visibility = "hidden";
-                    z.style.visibility = "hidden";
+                    y.style.display = "none";
+                    z.style.display = "none";
                     x.style.height = "80px";
 
                 }
