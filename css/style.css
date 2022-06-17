@@ -13,9 +13,9 @@
 }
 
 @font-face {
-    font-family: Glitch;
-    src: url('/fonts/ZillaSlabHighlight-Bold.ttf');
-    font-weight: 400;
+    font-family: Bungee;
+    src: url('/fonts/Oswald-VariableFont_wght.ttf');
+    font-weight: 100;
     font-display: swap;
 }
 
@@ -222,7 +222,7 @@ ol li {
 }
 
 .title-box:hover {
-    filter: invert(100%);
+    filter: invert(90%);
 }
 
 .post-title {
@@ -230,16 +230,18 @@ ol li {
     top: 50%;
     transform: translateY(-50%);
     text-align: center;
-    font-family: 'Glitch';
-    font-size: 70px;
-    color: var(--c-color);
+    font-family: 'Bungee';
+    letter-spacing: 3px;
+    line-height: 60px;
+    font-size: 50px;
+    color: var(--white-color);
     text-shadow: 2px 2px 10px #00000069;
     padding: 2vh 2vw;
 }
 
 .post-title-front {
     font-family: 'Roboto', sans-serif;
-    color: var(--e-color);
+    color: var(--black-color);
     transition: .5s all ease-in-out;
 }
 
@@ -802,6 +804,7 @@ pre[class*="language-"] {
 	-moz-hyphens: none;
 	-ms-hyphens: none;
 	hyphens: none;
+    overflow: auto;
 }
 
 pre[class*="language-"]::-moz-selection,
@@ -831,7 +834,6 @@ code[class*="language-"] ::selection {
 pre[class*="language-"] {
 	padding: 1em;
 	margin: 0.5em 0;
-	overflow: auto;
 }
 
 :not(pre) > code[class*="language-"],
@@ -959,10 +961,6 @@ pre[class*="language-"] {
 
     #social-links {
         display: none;
-    }
-
-    .post-title {
-        font-size: 25px;
     }
 
     .box {
