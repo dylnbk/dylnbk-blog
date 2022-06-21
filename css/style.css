@@ -327,12 +327,12 @@ nav a:hover{
     width: 100%;
     border: 1px solid var(--c-color);
     transition: all .5s ease-in-out;
-    filter: brightness(80%);
+    filter: brightness(90%);
 }
 
 
 .front-image:hover {
-    filter: brightness(100%);
+    filter: brightness(100%) contrast(110%);
     box-shadow: rgba(0, 0, 0, 0.432) 0px 3px 8px;
     border: 1px solid var(--z-color);
     transform: translateY(-.2rem);
@@ -784,14 +784,17 @@ label {
 
 /* ===== syntax highlighting with PrismJS ===== */
 
+
+
+
 code[class*="language-"],
 pre[class*="language-"] {
 	color: #d6deeb;
 	font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 	text-align: left;
-	white-space: pre;
+	white-space: pre-wrap;
 	word-spacing: normal;
-	word-break: normal;
+	word-break: break-word;
 	word-wrap: normal;
 	line-height: 1.5;
 	font-size: 15px;
@@ -804,7 +807,7 @@ pre[class*="language-"] {
 	-moz-hyphens: none;
 	-ms-hyphens: none;
 	hyphens: none;
-    overflow: auto;
+    overflow-x: auto;
 }
 
 pre[class*="language-"]::-moz-selection,
@@ -841,7 +844,7 @@ pre[class*="language-"] {
 	color: white;
 	background: #13131363;
     border-radius: .5rem;
-    box-shadow: rgba(0, 0, 0, 0.479) 0px 10px 50px 2px;
+    box-shadow: rgba(0, 0, 0, 0.479) 0px 0px 15px 2px;
 }
 
 :not(pre) > code[class*="language-"] {
@@ -1056,11 +1059,6 @@ pre[class*="language-"] {
 
     .menu-mobile {
         visibility: visible;
-    }
-
-    code[class*="language-"],
-    pre[class*="language-"] {
-        font-size: 10px;
     }
 
 }
