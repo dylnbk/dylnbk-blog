@@ -78,8 +78,7 @@
 }
 
 html {
-    animation: fadeInAnimation 2.5s ease;
-    opacity:1;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -782,9 +781,6 @@ label {
     0% {
         opacity: 0;
     }
-
-    90% { opacity: 0;}
-
     100% {
         opacity: 1;
     }
