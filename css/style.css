@@ -298,7 +298,6 @@ img[width][height] {
 nav {
     display: flex;
     justify-content: center;
-    align-items: center;
     position: absolute;
     bottom: 1vh;
     left: 49%;
@@ -307,6 +306,10 @@ nav {
     font-weight: 300;
     font-size: 23px;
     color: var(--d-color);
+}
+
+nav li {
+    padding: 0px 6px;
 }
 
 nav a{
