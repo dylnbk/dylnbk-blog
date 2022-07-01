@@ -15,8 +15,9 @@ layout: layouts/base.njk
                             Your browser does not support video.
                         </video>
                     {% else %}
+                        {% set picurl = [".", pic.data.artImage] | join %}
                         <div>
-                            <a href="{{ pic.url | url }}"><img class="front-image" src="{{ pic.data.artImage }}" alt="{{ artImage }}"></img></a>
+                            <a href="{{ pic.url | url }}">{% image "front-image", picurl, "artwork", "(max-width: 600px) 600px, (min-width: 601px) and (max-width: 1024px) 1024px, 100vw" %}</a>
                         </div>
                     {% endif %}
                 {% endfor %}
