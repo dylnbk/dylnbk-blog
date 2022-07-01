@@ -1,48 +1,40 @@
 @font-face {
     font-family: Roboto;
-    src: url('/fonts/Roboto-Regular.ttf');
+    src: url('/fonts/roboto-regular.woff2');
     font-weight: 400;
     font-display: swap;
 }
 
 @font-face {
     font-family: Roboto;
-    src: url('/fonts/Roboto-Bold.ttf');
+    src: url('/fonts/roboto-bold.woff2');
     font-weight: 700;
     font-display: swap;
 }
 
 @font-face {
-    font-family: Bungee;
-    src: url('/fonts/Oswald-VariableFont_wght.ttf');
+    font-family: Oswald;
+    src: url('/fonts/oswald-variable.woff2');
     font-weight: 100;
     font-display: swap;
 }
 
 @font-face {
     font-family: Nunito;
-    src: url('/fonts/NunitoSans-Regular.ttf');
+    src: url('/fonts/nunitosans-regular.woff2');
     font-weight: 400;
     font-display: swap;
 }
 
 @font-face {
     font-family: Inconsolata;
-    src: url('/fonts/Inconsolata-Light.ttf');
-    font-weight: 300;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: Inconsolata;
-    src: url('/fonts/Inconsolata-Regular.ttf');
-    font-weight: 400;
+    src: url('/fonts/inconsolata-variable.woff2');
     font-display: swap;
 }
 
 @font-face {
     font-family: Teko;
-    src: url('/fonts/Teko-Regular.ttf');
+    src: url('/fonts/teko-regular.woff2');
     font-weight: 400;
     font-display: swap;
 }
@@ -124,6 +116,8 @@ img[width][height] {
     font-size: 60px;
     color: var(--z-color);
     letter-spacing: 6px;
+    padding: 10px 0px;
+    margin-bottom: 10px;
     text-shadow: 2px 2px 15px #00000065;
 }
 
@@ -241,7 +235,8 @@ img[width][height] {
     top: 50%;
     transform: translateY(-50%);
     text-align: center;
-    font-family: 'Bungee';
+    font-family: 'Oswald';
+    font-weight: 100;
     letter-spacing: 3px;
     line-height: 60px;
     font-size: 50px;
@@ -262,6 +257,7 @@ img[width][height] {
 
 .post-date {
     font-family: 'Inconsolata', monospace;
+    font-weight: 300;
     font-size: 13px;
     position: relative;
     top: 45%;
@@ -275,6 +271,7 @@ img[width][height] {
     font-size: 13px;
     line-height: 30px;
     font-family: 'Inconsolata', monospace;
+    font-weight: 300;
     color: var(--a-color);
 }
 
@@ -292,6 +289,7 @@ img[width][height] {
 .post-description {
     display: block;
     font-family: 'Inconsolata', monospace;
+    font-weight: 300;
     font-size: 20px;
     color: var(--b-color);
     padding-left: 2px;
@@ -306,12 +304,14 @@ nav {
     left: 49%;
     transform: translate(-50%, 0);
     font-family: 'Inconsolata', monospace;
+    font-weight: 300;
     font-size: 23px;
     color: var(--d-color);
 }
 
 nav a{
     font-family: 'Inconsolata', monospace;
+    font-weight: 300;
     font-size: 23px;
     color: var(--c-color);
     transition: all .3s ease-in-out;
@@ -319,6 +319,7 @@ nav a{
 
 nav a:hover{
     font-family: 'Inconsolata', monospace;
+    font-weight: 300;
     color: var(--a-color);
     text-shadow: 2px 2px 10px #000000d7;
 }
@@ -326,7 +327,7 @@ nav a:hover{
 .menu-mobile {
     font-size: 33px;
     padding-right: 4vw;
-    padding-top: 15px;
+    padding-top: 5px;
     position: absolute;
     right: 0;
     color: var(--z-color);
@@ -448,6 +449,7 @@ label {
 
 .message {
     font-family: 'Inconsolata', monospace;
+    font-weight: 300;
     font-size: 20px;
     width: 60%;
     max-width: 475px;
@@ -465,6 +467,7 @@ label {
   
 .email {
     font-family: 'Inconsolata', monospace;
+    font-weight: 300;
     font-size: 20px;
     width: 60%;
     height: 25px;
@@ -479,6 +482,7 @@ label {
 
 .name {
     font-family: 'Inconsolata', monospace;
+    font-weight: 300;
     font-size: 20px;
     width: 60%;
     height: 25px;
