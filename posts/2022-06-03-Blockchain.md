@@ -6,7 +6,7 @@ date: 2022-06-03T23:00:00.000Z
 featuredImage: /media/uploads/posts/Blockchain.jpg
 ---
 
-## <u>Blockchain - Introduction</u> <br><br>
+## <u>Introduction</u> <br><br>
 
 The 21st century has started with the emergence of a powerful new resource, aiding in the creation of obscene amounts of wealth over
 just a couple of decades. <strong> “Big data” </strong> ... <strong> “Data is the new oil” </strong> ... In 2005, unique internet users hit 1 billion people. Around this
