@@ -1,5 +1,5 @@
 ---
 layout: layouts/art.njk
-title: Ptuble
-artImage: /media/uploads/Ptuble.jpg
+title: Fluuuop
+artImage: /media/uploads/Fluuuop.jpg
 ---
