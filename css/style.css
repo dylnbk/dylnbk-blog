@@ -216,7 +216,7 @@ img[alt=Blockchain] {
 }
 
 .blog-post-page:hover {
-    background-color: #8585854d;
+    background-color: #9291917a;
 }
 
 .blog-post-top {
@@ -1069,7 +1069,7 @@ pre[class*="language-"] {
     }
 
     .blog-post-page:hover {
-        background-color: var(--d-color);
+        background-color: var(--a-color);
     }
 
     .right-panel {
