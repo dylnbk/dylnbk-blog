@@ -1,5 +1,5 @@
 ---
 layout: layouts/art.njk
-title: Flerkrt
-artImage: /media/uploads/Flerkrt.jpg
+title: Shlufklan
+artImage: /media/uploads/Shlufklan.jpg
 ---
