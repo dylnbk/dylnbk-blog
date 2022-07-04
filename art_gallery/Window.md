@@ -1,5 +1,5 @@
 ---
 layout: layouts/art.njk
-title: Window
-artImage: /media/uploads/Window.jpg
+title: Fair
+artImage: /media/uploads/Fair.jpg
 ---
