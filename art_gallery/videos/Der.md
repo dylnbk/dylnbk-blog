@@ -1,5 +1,5 @@
 ---
 layout: layouts/art.njk
-title: Der
-artVideo: /media/uploads/der.mp4
+title: Lines
+artVideo: /media/uploads/lines.mp4
 ---

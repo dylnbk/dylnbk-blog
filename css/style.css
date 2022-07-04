@@ -1069,7 +1069,7 @@ pre[class*="language-"] {
     }
 
     .blog-post-page:hover {
-        background-color: var(--a-color);
+        background-color: var(--d-color);
     }
 
     .right-panel {
