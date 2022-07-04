@@ -6,7 +6,7 @@ async function imageShortcode(cls, src, alt, sizes) {
   let metadata = await Image(src, {
     widths: [null, 600, 1024],
     formats: ["jpeg"],
-    urlPath: "/media/uploads/",
+    urlPath: "./media/uploads/",
     outputDir: "./_site/media/uploads/",
   });
 
