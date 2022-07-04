@@ -1,5 +1,5 @@
 ---
 layout: layouts/art.njk
-title: Shlufklan
-artImage: /media/uploads/Shlufklan.jpg
+title: Shlam
+artImage: /media/uploads/Shlam.jpg
 ---
