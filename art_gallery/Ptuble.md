@@ -1,5 +1,5 @@
 ---
 layout: layouts/art.njk
-title: Ptuble
-artImage: /media/uploads/artwork/Ptuble.jpg
+title: Limon
+artImage: /media/uploads/artwork/Limon.jpg
 ---

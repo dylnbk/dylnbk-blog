@@ -109,15 +109,21 @@ img[width][height] {
     height: auto; /* Preserve aspect ratio */
 }
 
+img[alt=Blockchain] {
+    width: 100vw;
+    padding: 5vh 5vw;
+}
+
 .heading {
     display: grid;
     place-content: center;
     font-family: 'Teko', sans-serif;
-    font-size: 60px;
+    font-size: 65px;
     color: var(--z-color);
     letter-spacing: 6px;
-    padding: 10px 0px;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    margin-top: 5px;
     text-shadow: 2px 2px 15px #00000065;
 }
 
@@ -197,7 +203,9 @@ img[width][height] {
     border: 2px solid var(--c-color);
     box-shadow: rgb(0, 0, 0) 0px 0px 15px -7px;
     display: block;
-    margin: 3vh auto;
+    margin: 0 auto;
+    margin-top: 5vh;
+    margin-bottom: 35px;
     transition: .5s all ease-in-out;
 }
 
@@ -237,9 +245,9 @@ img[width][height] {
     text-align: center;
     font-family: 'Oswald';
     font-weight: 100;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     line-height: 60px;
-    font-size: 50px;
+    font-size: 40px;
     color: var(--white-color);
     text-shadow: 2px 2px 10px #00000069;
     padding: 2vh 2vw;
