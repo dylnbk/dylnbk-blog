@@ -3,7 +3,7 @@ layout: layouts/post.njk
 title: Blockchain, Data Breaches & the Future of Data Security - Part 1
 description: A look at the history of Blockchain technology, how it functions & common critisms.
 date: 2022-06-03T23:00:00.000Z
-featuredImage: /media/uploads/posts/Blockchain.jpg
+featuredImage: /media/uploads/Blockchain.jpg
 ---
 
 ## <br><u>Introduction</u> <br><br>
@@ -75,7 +75,7 @@ Put simply, mining is the process in which computers complete some work and are 
 
 This leads us to the next set of major differences between various types of blockchains, the ‘consensus mechanism’. To solve the problem of trust in a decentralised network, various approaches have been taken. Proof of Work (PoW), Proof of Stake (PoS), Delegated Proof of Stake (DPoS), Practical Byzantine Fault Tolerance (PBFT) and Directed Acyclic Graph (DAG) are currently the most commonly used algorithms. <br><br>
 
-![Blockchain](/media/uploads/posts/Chain.png) <br><br>
+![Blockchain](/media/uploads/Chain.png) <br><br>
 
 
 The above graphic shows a simplified representation of the PoW consensus mechanism used in Bitcoin. When a user wishes to submit data to the blockchain they announce it to the network, nodes then collect pending entries and group them into a block. Appending a block to the chain is not free, PoW requires that the ‘miner’ (node) uses up resources for the privilege. All of the data in the block, along with a timestamp and reference to the previous block, is passed through a hashing function; which acts like a fingerprint unique to each block. Added to this is a variable called a nonce, this is a number that changes with every hashing attempt. The goal of the miner is to repeatedly guess hashes (altering the nonce each time) until one is produced that meets the required difficulty standards dictated by the protocol, this difficulty changes as more or less nodes contribute their resources to the network. The higher the hash rate, the more difficult it is to find a valid hash. Once the requirement has been satisfied, the miner broadcasts the result to the network and participants validate then update their chain to include the new block. The winning miner is rewarded for their efforts with newly minted Bitcoin, this process makes it expensive to try and cheat but profitable to act honestly. Together with public key cryptography to secure each ‘wallet’ (account), the mechanism provides a secure way to transact anonymously with no requirement for a centralised server. <br><br>

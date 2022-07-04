@@ -3,7 +3,7 @@ layout: layouts/post.njk
 title: Blockchain, Data Breaches & the Future of Data Security - Part 2
 description: Our life online, data breaches & the challenges of keeping information secure.
 date: 2022-06-04T23:00:00.000Z
-featuredImage: /media/uploads/posts/Blockchain.jpg
+featuredImage: /media/uploads/Blockchain.jpg
 ---
 
 ## <br><u>Our Data Online</u> <br><br>
