@@ -9,10 +9,8 @@ layout: layouts/base.njk
             {% for pics in collections.photos | slice(4) %}
                 <ul class="column">
                 {% for pic in pics | reverse %}
-
-                    {% set picurl = [".", pic.data.photoImage] | join %}
                     <div>
-                        <a href="{{ pic.url | url }}">{% image "front-image", picurl, "photograph", "(max-width: 600px) 600px, (min-width: 601px) and (max-width: 1024px) 1024px, 100vw" %}</a>
+                        <a href="{{ pic.url | url }}">{% image "front-image", "." + pic.data.photoImage, "photograph", "(max-width: 600px) 600px, (min-width: 601px) and (max-width: 1024px) 1024px, 100vw" %}</a>
                     </div>
                 {% endfor %}
                 </ul>
