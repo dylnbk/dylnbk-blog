@@ -1,8 +1,8 @@
 ---
 layout: layouts/post.njk
 title: Blockchain, Data Breaches & the Future of Data Security - Part 1
-description: A look at the history of Blockchain technology, how it functions & common critisms.
-date: 2022-06-03T23:00:00.000Z
+description: A look at the history of Blockchain technology, how it functions & common criticisms.
+date: 2022-06-06T23:00:00.000Z
 featuredImage: /media/uploads/Blockchain.jpg
 ---
 

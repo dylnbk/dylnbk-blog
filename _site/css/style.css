@@ -289,6 +289,7 @@ img[alt=Blockchain] {
     padding: 5vh 5vw;
     font-family: 'Nunito';
     font-weight: 400;
+    line-height: 1.5rem;
     color: var(--black-color);
     font-size: 1rem;
     text-shadow: 2px 2px 10px #0000001c;
@@ -338,7 +339,7 @@ nav a:hover{
 .menu-mobile {
     font-size: 33px;
     padding-right: 4vw;
-    padding-top: 10px;
+    padding-top: 15px;
     position: absolute;
     right: 0;
     color: var(--z-color);
