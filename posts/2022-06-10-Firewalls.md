@@ -3,7 +3,7 @@ layout: layouts/post.njk
 title: Purpose and Function of Firewalls
 description: Reasons for using a firewall & different types of firewall technologies.
 date: 2022-06-10T23:00:00.000Z
-featuredImage: /media/uploads/Blockchain.jpg
+featuredImage: /media/uploads/wall.jpg
 ---
 
 ## <br><u>Introduction</u> <br><br>
