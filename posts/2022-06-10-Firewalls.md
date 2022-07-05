@@ -20,7 +20,7 @@ essential. <br><br>
 As our physical and digital life becomes further entwined, we are increasingly governed by a myriad of unseen rules and permissions.
 Every time we open one of our electronic devices, we trust that the outside connections it makes are free from danger. The
 organizations which provide the various services that we interact with have a considerable challenge in maintaining and mitigating
-threats for its clients. Firewall technology has vastly improved since its inception in the late 1980s, this report aims to critically evaluate
+threats for its clients. Firewall technology has vastly improved since its inception in the late 1980s, this article aims to critically evaluate
 and reflect on the various types of firewalls that are used in the industry and their purpose, while considering the principles of
 organizational structure and network security. <br><br><br>
 
