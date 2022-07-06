@@ -1,4 +1,4 @@
 ---
-title: Wanting More
+title: Something
 music: /media/uploads/want.mp3
 ---
