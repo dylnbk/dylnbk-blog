@@ -4,6 +4,8 @@ My website.
 
 Made with 11ty, deployed on Netlify with their CMS integration.
 
+[dylnbk.page](https://www.dylnbk.page)
+
 A place for my ideas and posts, art, music and photography.
 
 # To Do
