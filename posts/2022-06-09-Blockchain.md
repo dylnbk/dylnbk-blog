@@ -1,7 +1,7 @@
 ---
 layout: layouts/post.njk
 title: Blockchain, Data Breaches & the Future of Data Security - Part 3
-description: Current data loss prevention methods, potential Blockchain alternatives & a glimse at post quantum cryptography.
+description: Current data loss prevention methods, potential Blockchain alternatives & a glimpse at post quantum cryptography.
 date: 2022-06-09T23:00:00.000Z
 featuredImage: /media/uploads/code.jpg
 ---
