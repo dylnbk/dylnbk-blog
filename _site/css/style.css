@@ -1061,7 +1061,7 @@ pre[class*="language-"] {
     }
 
     .blog-post-page {
-        background-color: var(--c-color);
+        background-color: var(--d-color);
     }
 
     .blog-post-top {
@@ -1071,7 +1071,7 @@ pre[class*="language-"] {
     }
 
     .blog-post-page:hover {
-        background-color: var(--c-color);
+        background-color: var(--d-color);
     }
 
     .post-content {
