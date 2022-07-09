@@ -2,7 +2,7 @@
 
 My website.
 
-Made with 11ty, deployed on Netlify with their CMS integration.
+Made using [11ty](https://github.com/11ty/eleventy), deployed on Netlify with their CMS integration.
 
 [dylnbk.page](https://www.dylnbk.page)
 
