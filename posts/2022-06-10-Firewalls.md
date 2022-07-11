@@ -8,9 +8,7 @@ featuredImage: /media/uploads/wall.jpg
 
 ## <br><u>Introduction</u> <br><br>
 
-Over the last decade, data has overtaken oil as the most valuable resource on the planet. This relatively new commodity has created
-several lucrative and fast growing industries, some of the largest companies in the world have made their fortunes by utilizing the
-information harvested from our devices. The internet as we know it has developed into an extremely complex
+The internet as we know it has developed into an extremely complex
 network, with many of our key services and infrastructure reliant on the ability to communicate online. An extraordinary
 amount of sensitive information lives on systems that are connected to the internet and like any valuable resource, there is a great
 need for it to be kept safe. Security considerations such as a firewall, whether for personal use or at an organizational level, are
