@@ -26,7 +26,7 @@ organizational structure and network security. <br><br><br>
 ## <u>Purpose of a Firewall</u> <br><br>
 
 The rationale behind installing a firewall is generally to help protect a private system
-against intrusion, preventing unnoticed and unauthorized users from acquiring
+against intrusion, preventing unauthorized users from acquiring
 proprietary information. It should analyse and filter traffic between
 networks and external devices, halting any illegal behaviours before they gain unwanted
 entry to the destination host. When connecting a device directly to the
