@@ -196,15 +196,19 @@ img[alt=Blockchain] {
 }
 
 .avatar {
-    width: 160px;
-    border-radius: 50%;
-    border: 2px solid var(--c-color);
+    width: 155px;
+    border-radius: 10%;
+    border: 3px solid var(--white-color);
     box-shadow: rgb(0, 0, 0) 0px 0px 15px -7px;
     display: block;
     margin: 0 auto;
     margin-top: 5vh;
     margin-bottom: 35px;
     transition: .5s all ease-in-out;
+}
+
+.avatar:hover {
+    transform: scale(1.05);
 }
 
 .blog-post-page {
