@@ -353,12 +353,11 @@ nav a:hover{
     width: 100%;
     border: 1px solid var(--c-color);
     transition: all .5s ease-in-out;
-    filter: brightness(90%);
 }
 
 
 .front-image:hover {
-    filter: brightness(100%) contrast(110%);
+    filter: contrast(110%) drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.26));
     box-shadow: rgba(0, 0, 0, 0.432) 0px 3px 8px;
     border: 1px solid var(--z-color);
     transform: translateY(-.2rem);
