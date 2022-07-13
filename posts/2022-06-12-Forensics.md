@@ -1,7 +1,7 @@
 ---
 layout: layouts/post.njk
 title: Digital Forensics - Processes and Procedures
-description: The process of conducting a forensic investigation and some the software commonly used in the industry.
+description: The process of conducting a forensic investigation & some of the software commonly used in the industry.
 date: 2022-06-12T23:00:00.000Z
 featuredImage: /media/uploads/forensic.jpg
 ---
