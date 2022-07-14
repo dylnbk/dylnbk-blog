@@ -125,6 +125,15 @@ img[alt=Blockchain] {
     text-shadow: 2px 2px 15px #00000065;
 }
 
+.heading a{
+    transition: all .5s ease-in-out;
+}
+
+.heading a:hover {
+    color: var(--a-color);
+    transform: scale(1.03);
+}
+
 #links {
     display: grid;
     place-content: center;
@@ -205,10 +214,6 @@ img[alt=Blockchain] {
     margin-top: 5vh;
     margin-bottom: 35px;
     transition: .5s all ease-in-out;
-}
-
-.avatar:hover {
-    transform: scale(1.05);
 }
 
 .blog-post-page {
