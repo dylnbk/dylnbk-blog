@@ -1106,6 +1106,10 @@ pre[class*="language-"] {
         visibility: visible;
     }
 
+    nav a{
+        color: var(--e-color);
+    }
+
 }
 
 @media screen and (max-width: 425px) {
