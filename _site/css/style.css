@@ -975,6 +975,14 @@ pre[class*="language-"] {
 
 /* =================================== */
 
+@media screen and (max-width: 1500px) {
+
+    .post-content {
+        padding: 0 8vw;
+    }
+
+}
+
 @media screen and (max-width: 1023px), (max-height: 768px) {
 
     body {
@@ -1011,18 +1019,30 @@ pre[class*="language-"] {
         box-shadow: none;
         background-color: var(--c-color);
         margin-top: 1vh;
+        border: transparent;
     }
 
     .contact:hover {
         box-shadow: none;
+        background-color: var(--c-color);
     }
 
     .message {
         height: 20vh;
+        color: var(--d-color);
+    }
+
+    .email {
+        color: var(--d-color);
+    }
+
+    .name {
+        color: var(--d-color);
     }
 
     .btncontact {
         bottom: 2vh;
+        color: var(--d-color);
     }
 
     .outer {
@@ -1088,6 +1108,7 @@ pre[class*="language-"] {
 
     .post-content {
         padding: 0 10vw;
+        max
     }
 
     .right-panel {
