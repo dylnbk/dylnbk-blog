@@ -978,7 +978,7 @@ pre[class*="language-"] {
 @media screen and (max-width: 1023px), (max-height: 768px) {
 
     body {
-        background: var(--d-color);
+        background: var(--c-color);
     }
 
     nav {
@@ -1009,7 +1009,7 @@ pre[class*="language-"] {
 
     .contact {
         box-shadow: none;
-        background-color: var(--d-color);
+        background-color: var(--c-color);
         margin-top: 1vh;
     }
 
@@ -1026,14 +1026,14 @@ pre[class*="language-"] {
     }
 
     .outer {
-        background: var(--d-color);
+        background: var(--c-color);
     }
 
     .glass {
         height: 100vh;
         width: 100vw;
         grid-template-columns: 1fr;
-        background: var(--d-color);
+        background: var(--c-color);
         box-shadow: none;
     }
 
@@ -1049,7 +1049,7 @@ pre[class*="language-"] {
     }
 
     .right-panel {
-        background: var(--d-color);
+        background: var(--c-color);
         border-radius: 0px;
         z-index: 1;
         padding-top: 40px;
@@ -1068,8 +1068,12 @@ pre[class*="language-"] {
         box-shadow: none;
     }
 
+    .post-description {
+        color: var(--e-color);
+    }
+
     .blog-post-page {
-        background-color: var(--d-color);
+        background-color: var(--c-color);
     }
 
     .blog-post-top {
@@ -1079,7 +1083,7 @@ pre[class*="language-"] {
     }
 
     .blog-post-page:hover {
-        background-color: var(--d-color);
+        background-color: var(--c-color);
     }
 
     .post-content {
