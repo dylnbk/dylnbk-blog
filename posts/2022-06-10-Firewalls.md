@@ -40,11 +40,7 @@ play within well-guarded organizational structures. As security threats continue
 advance in capabilities, demand has grown for establishments to develop their security
 operations centres. There are lots of methods available to implement a capable set of
 security protocols, however making certain that a layered approach is used will ensure
-that if a particular defence measure fails, another will help prevent an attack. Figure 1 shows the topology of a basic secured network, you will commonly see
-something similar inside many organizations. The structure is important for limiting the
-freedom and unpredictability of the members and any interactions with external entities.
-As we can see, all outside connections are routed through the firewall, it is the first device
-to enforce access policies on traffic entering and exiting the network. <br><br>
+that if a particular defence measure fails, another will help prevent an attack. <br><br>
 
 
 Increasingly we are seeing that traditional centralized and hierarchical organizations are
