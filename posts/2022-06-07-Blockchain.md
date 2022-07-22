@@ -32,7 +32,7 @@ Target sent coupons for baby clothes to a customer’s daughter; using shopping 
 
 
 Is the collection of user data always a bad thing? Not necessarily. A team of researchers from Google were able to track the spread of
-influenza without the results of a single medical check-up and they could do this more quickly than the CDC. A recent report estimated
+influenza without the results of a single medical check-up and they could do this quicker than the CDC. A recent report estimated
 that the US healthcare system could save hundreds of billions of dollars each year through better integration and analysis of medical
 data, an overarching system that uses information gathered from clinical studies to smart devices could not only save money but also
 lives. Interestingly, when survey participants were asked if they would use a blockchain application that offered
