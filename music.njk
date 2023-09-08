@@ -1,0 +1,45 @@
+---
+title: dylnbk.page
+layout: layouts/base.njk
+eleventyExcludeFromCollections: true
+pagination:
+  data: collections.music
+  size: 8
+  alias: music
+  reverse: true
+---
+        
+<ul class="post-panel-front">
+    
+    {% for track in music %}
+        <div class="container">
+            <div class="box">
+                <h2 class="post-title-front" style="margin-bottom: 15px;">{{ track.data.title }}</h2>
+                <audio controls>
+                    <source src="{{ track.data.music }}" type="audio/mp3">
+                Your browser does not support the audio element.
+                </audio>
+                
+            </div>
+        </div>
+    {% endfor %}
+
+</ul>
+
+<nav>
+    <ol>
+        <li>{% if page.url != pagination.href.first %}<a href="{{ pagination.href.first }}">•</a>{% else %}•{% endif %}</li>
+    {%- for pageEntry in pagination.pages %}
+        <li><a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>{{ loop.index }}</a></li>
+    {%- endfor %}
+        <li>{% if page.url != pagination.href.last %}<a href="{{ pagination.href.last }}">•</a>{% else %}•{% endif %}</li>
+    </ol>
+</nav>
+
+
+
+<script>
+    window.onload = function() {
+        document.getElementById('music').className='underline-perm';
+    };
+</script>

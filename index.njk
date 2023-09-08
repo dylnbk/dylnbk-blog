@@ -1,0 +1,46 @@
+---
+title: dylnbk.page
+layout: layouts/base.njk
+eleventyExcludeFromCollections: true
+pagination:
+  data: collections.posts
+  size: 8
+  alias: posts
+  reverse: true
+---
+        
+<div class="post-panel-front">
+
+    {% for post in posts %}
+            <div class="container">
+                <div class="box">
+                    <h2>
+                        <a class="post-title-front" href="{{ post.url | url }}">{{ post.data.title }}</a>
+                    </h2>
+                    <div style="padding-bottom: 10px;">
+                        <time class="post-date-front" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+                    </div>
+                    <span class="post-description">
+                        {{ post.data.description }}
+                    </span>
+                </div>
+            </div>
+    {% endfor %}
+
+</div>
+
+<nav>
+    <ol>
+        <li>{% if page.url != pagination.href.first %}<a href="{{ pagination.href.first }}">•</a>{% else %}•{% endif %}</li>
+    {%- for pageEntry in pagination.pages %}
+        <li><a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>{{ loop.index }}</a></li>
+    {%- endfor %}
+        <li>{% if page.url != pagination.href.last %}<a href="{{ pagination.href.last }}">•</a>{% else %}•{% endif %}</li>
+    </ol>
+</nav>
+
+<script>
+    window.onload = function() {
+        document.getElementById('blog').className='underline-perm';
+    };
+</script>

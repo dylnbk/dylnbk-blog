@@ -1,0 +1,55 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: "media/uploads"
+public_folder: "/media/uploads"
+
+collections:
+  - name: "posts"
+    label: "Post"
+    folder: "posts"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    create: true
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk"}
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Date", name: "date", widget: "date", default: "" }
+      - { label: "Post", name: "body", widget: "markdown" }
+      - { label: "Featured Image", name: "featuredImage", widget: "image" }
+    
+  - name: "photos"
+    label: "Photo"
+    folder: "photo_gallery"
+    create: true
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/photo.njk"}
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Photo", name: "photoImage", widget: "image" }
+
+  - name: "art"
+    label: "Art"
+    folder: "art_gallery"
+    create: true
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/art.njk"}
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Art Image", name: "artImage", widget: "image" }
+  
+  - name: "video"
+    label: "Video"
+    folder: "art_gallery/videos"
+    create: true
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/art.njk"}
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Art Video", name: "artVideo", widget: "file" }
+
+  - name: "music"
+    label: "Music"
+    folder: "music_gallery"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Music", name: "music", widget: "file" }

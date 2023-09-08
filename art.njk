@@ -1,0 +1,79 @@
+---
+title: dylnbk.page
+layout: layouts/base.njk
+---
+
+<ul class="post-panel-front">
+    <div id="photo-center">
+        <div class="row">
+            {% for pics in collections.art | slice(4) %}
+                <ul class="column">
+                {% for pic in pics | reverse %}
+                    {% if "video" in pic.data.tags %}
+                        <video style="margin-top: 10px; margin-bottom: -5px;" class="front-image" loop autoplay>
+                            <source src="{{ pic.data.artVideo }}" type="video/mp4">
+                            Your browser does not support video.
+                        </video>
+                    {% else %}
+                        <div>
+                            <a href="{{ pic.url | url }}">{% image "front-image", "." + pic.data.artImage, "artwork", "(max-width: 600px) 600px, (min-width: 601px) and (max-width: 1024px) 1024px, 100vw" %}</a>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+                </ul>
+            {% endfor %}
+        </div>
+    </div>
+</ul>
+
+<div class="grid-change">
+    <button class="btn" onclick="one()"><img id="icons-layout" src="/fonts/layout-one.svg"></img></button>
+    <button class="btn active" onclick="two()"><img id="icons-layout" src="/fonts/layout-two.svg"></img></button>
+    <button class="btn" onclick="four()"><img id="icons-layout" src="/fonts/layout-three.svg"></img></button>
+</div>
+<script>
+
+    window.onload = function() {
+        document.getElementById('art').className='underline-perm';
+    };
+
+    // Get the elements with class="column"
+    var elements = document.getElementsByClassName("column");
+
+    // Declare a loop variable
+    var i;
+
+    // Full-width images
+    function one() {
+        for (i = 0; i < elements.length; i++) {
+        elements[i].style.msFlex = "100%";  // IE10
+        elements[i].style.flex = "100%";
+        }
+    }
+
+    // Two images side by side
+    function two() {
+    for (i = 0; i < elements.length; i++) {
+        elements[i].style.msFlex = "50%";  // IE10
+        elements[i].style.flex = "50%";
+        }
+    }
+
+    // Four images side by side
+    function four() {
+    for (i = 0; i < elements.length; i++) {
+        elements[i].style.msFlex = "25%";  // IE10
+        elements[i].style.flex = "25%";
+        }
+    }
+
+    var btns = document.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+        });
+    }
+
+</script>

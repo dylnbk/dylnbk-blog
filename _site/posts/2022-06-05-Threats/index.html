@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="dyln.bk - A home for my ideas, apps, music, artwork and photography">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="icon" href="/media/uploads/icon.png" type="image/x-icon">
+        <title>dylnbk.page</title>
+    
+    </head>
+
+    <body>
+        <div class='light x1'></div>
+        <div class='light x2'></div>
+        <div class='light x3'></div>
+        <div class='light x4'></div>
+        <div class='light x5'></div>
+        <div class='light x6'></div>
+        <div class='light x7'></div>
+        <div class='light x8'></div>
+        <div class='light x9'></div>
+        <div class="outer">
+            <div class="glass">
+                <div id="left-panel">
+                    <img class="avatar" src="/media/uploads/avatar.webp">
+                    <div>
+                        <h1 class="heading"><a href="https://dylnbk.info">dyln.bk</a><span class="menu-mobile" onclick="openMenu()">☰</span></h1>
+                    </div>
+                    <div id="links">
+                        <ul id="left-navbar">
+                            <li class="nav-links"><a id="blog" class="underline" href="/">BLOG</a></li>
+                            <li class="nav-links"><a id="apps" class="underline" href="/apps/index.html">APPS</a></li>
+                            <li class="nav-links"><a id="photography" class="underline" href="/photography/index.html">PHOTOS</a></li>
+                            <li class="nav-links"><a id="music" class="underline" href="/music/index.html">MUSIC</a></li>
+                            <li class="nav-links"><a id="art" class="underline" href="/art/index.html">ART</a></li>
+                            <li class="nav-links"><a id="contact" class="underline" href="/contact/index.html">CONTACT</a></li>
+                        </ul>                        
+                    </div>
+                    <div id="social-links">
+                        <a href="https://www.instagram.com/dyln.bk/"><img id="icons" src="/fonts/icon-instagram.svg"></img></a>
+                        <a href="https://github.com/dylnbk"><img id="icons" src="/fonts/icon-github.svg"></img></a>
+                        <a href="https://www.linkedin.com/in/dylnbk/"><img id="icons" src="/fonts/icon-linkedin.svg"></img></a>
+                    </div>
+                </div>   
+                <div class="right-panel">
+                    
+<div class="post-panel-front">
+    <div class="blog-post-page">
+        <div class="blog-post-top">
+            <picture>
+                <source srcset="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" media="(max-width: 1023px)">
+                <img class="featured-image" src="/media/uploads/hack.jpg" alt="/media/uploads/hack.jpg"></img>
+            </picture>
+            <div class="title-box">
+                <h2 class="post-title">APTs &amp; Security Issues Within a LAN/WAN Environment</h2>
+            </div>
+        </div>
+        <article class="post-content"> <h2><br>Introduction <br><br></h2>
+<p>APTs pose a significant and growing risk to global stability. Often nation states or state sponsored groups, they are generally
+politically motivated and the impact of their activities can be far reaching for individuals, nations and businesses. Over the years
+there have been many attacks on the infrastructure and systems that we all rely on for communication, energy, education,
+finance, healthcare and more. Some of the most well known attacks publicized by the media include Stuxnet, a worm that
+targeted the nuclear program of Iran, Deep Panda which has been attributed to an ongoing battle between China and the US
+and exposed millions of US personnel records, and GhostNet which was a large scale espionage operation that had the ability to
+monitor video, audio and the location of infected devices. We will focus on the details surrounding two attacks that
+occurred in 2017 using the vulnerability EternalBlue, leading to the network security breaches WannaCry and NotPetya. <br><br><br></p>
+<h2>Advanced Persistent Threat Actors <br><br></h2>
+<h3>- EternalBlue<br><br></h3>
+<p>The name EternalBlue has been given to a critical
+Microsoft vulnerability and an exploit allegedly
+originating from the Equation Group, an APT actor that
+is suspected of being tied to the NSA. It has been
+reported that the NSA helped develop EternalBlue as
+part of their program of collecting and weaponizing
+vulnerabilities, and that it was used in countless
+intelligence gathering and counterterrorist missions. It was released in 2017 as part of a
+toolkit of weaponized exploits by a group operating
+under the name of “The Shadow Brokers”, the
+FUZZBUNCH framework included various methods
+targeting Microsoft Windows vulnerabilities. <br><br></p>
+<p>EternalBlue abuses a critical flaw in any device that
+utilises the Server Message Block protocol. The SMB, which was first developed in the early
+1980s, allows for an authenticated inter process
+communication mechanism that is mainly used for
+providing shared access to ports, printers and files
+between nodes. It lets Windows machines and various
+devices talk to one another.<br><br></p>
+<p>To gain access to a system, EternalBlue leverages different bugs. The first occurs when the SMB protocol attempts to cast a File
+Extended Attribute list structure into a Windows NT FEA structure to determine memory allocation. A mathematical error
+creates an integer overflow that causes less memory to be allocated than expected leading to a buffer overflow. This overflow is
+achieved due to a difference in definition between the two sub commands <strong>SMB_COM_TRANSACTION2</strong> and
+<strong>SMB_COM_NT_TRANSACT</strong>. Both contain a <strong>_SECONDARY</strong> command that is used when too much data is included in a single
+packet, the important part is that <strong>NT_TRANSACT</strong> calls for a packet twice the size of <strong>TRANSACTION2</strong>. A significant error occurs
+when the client sends a crafted message using the <strong>NT_TRANSACT</strong> command before <strong>TRANSACTION2</strong>. The protocol assigns type,
+size and memory allocation for both packets based only on the last command received, this results in the first packet utilising
+more memory than allocated. After the overflow has succeeded, the third bug allows for heap spraying; a method of allocation
+that inserts data into certain parts of memory. At this point, the attacker can execute shellcode and take control of the system. <br><br></p>
+<h3>- WannaCry<br><br></h3>
+<p>Whereas EternalBlue is a method to gain access to networks
+and devices, WannaCry is ransomware that encrypts users
+data and demands that ransom payments are made in order
+to decrypt them. In May 2017, the WannaCry attack was
+estimated to have infected more than 200,000 computers
+around the world. It is believed that the APT actor known as
+the Lazarus Group is responsible.<br><br></p>
+<p>The process uses a combination of EternalBlue and a trojan
+named DoublePulsar to gain access and then establish
+persistence on the victim’s device. WannaCry itself is made of
+two main parts, a ransomware component and a worm used to spread the malware. It was able to spread in such an efficient
+manner as it capitalised on EternalBlue and the ability to beacon out and propagate to other potential SMB targets on
+connected networks, without any user interaction. The dropper creates a service that masquerades as a
+Microsoft executable and it extracts the encrypting tool. Several files are then positioned in the working directory, it attempts to
+grant them all full access and change their attributes to hidden. At this point using RSA and AES libraries, WannaCry begins to
+encrypt the users’ files. All logical drives are searched and a variety of file extensions are targeted. It launches
+@WanaDecryptor@.exe which displays the timers and ransom note, after the second timer expires the user is advised that the
+files are no longer recoverable.<br><br></p>
+<h3>- NotPetya<br><br></h3>
+<p>NotPetya has been called ransomware, but analysts have
+noted it is more likely that the motivation behind this attack
+was aimed at the destruction of systems rather than financial
+incentives. <br><br></p>
+<p>It began around June 2017 with a campaign of malware laden
+emails, and an update that deployed the NotPetya payload.dll
+to users of the compromised Ukrainian accounting software
+“M.E. Doc”, a program being used by most of the country’s
+financial and government institutions. The executable uses
+faked Microsoft digital signatures to fool virus scanners, when
+the malware began spreading only two anti-virus engines on the VirusTotal roster flagged it as dangerous.
+Following execution of the malware, it checks to see if the EternalBlue vulnerability has been patched before searching for
+additional propagation paths and encrypting the users’ data. If the system has been patched NotPetya uses a Mimikatz based
+technique that takes credentials from the Windows LSASS. The collected credentials are then used in an attempt to gain access
+and control with PsExec. From here the master boot record is overwritten and modified, the system restarts and displays a
+fictitious “chkdsk.exe” partition repair screen while it encrypts the users’ data. Finally the ransom note is displayed, there is no
+evidence that users’ files will be decrypted if they pay the fee.<br><br><br></p>
+<h2>Impact <br><br></h2>
+<p>The effects of these huge network breaches can be felt all over the world, tens of thousands of organizations have been infected
+with malware such as WannaCry and NotPetya. In the UK, the WannaCry outbreak shut down computers in over 80 NHS
+organizations causing thousands of cancelled appointments, GP surgeries reverted to pen and paper and hospitals turned away
+ambulances. After installing a new software tool, the Taiwan Semiconductor Manufacturing company fell victim to
+WannaCry causing affected tools to become inoperable and unable to function normally, resulting in what could cost the
+company $170 million . Due to lost productivity, the cost of forensic investigations and the restoration of data, the
+total global financial and economic impact from the WannaCry attack could amount to billions of dollars, with some estimates
+predicting losses of up to $4 billion.<br><br></p>
+<p>NotPetya has been attributed to the Sandworm Team, a Russian backed APT. US officials charged six suspects, claiming that on
+behalf of the Russian government they conducted attacks intended to destabilize and interfere with other countries, causing
+chaos and monetary losses. Despite originating in Ukraine, the malware quickly spread across the globe and
+locked up devices at various multi billion dollar companies such as FedEx, MSD, Cadbury and Maersk. Experts believe that these
+ransomware attacks are often being used as a smokescreen, obfuscating and diverting blame from the countries that are
+actually responsible. Collateral damage occurs when civilians get caught in the crossfire; hospitals, power grids, universities,
+airports and more have suffered service outages, leading to the disruption of urgently required facilities. In the case
+of both WannaCry and NotPetya, users’ files were generally lost forever as paying the fee would not decrypt the data.<br><br></p>
+<p>So far, the Shadow Brokers’ leak of EternalBlue has led to some of the most serious network breaches on record. As digital
+technologies become deeply engrained into everybody’s daily life, we are becoming increasingly open to new threats. Although
+Microsoft has patched the vulnerability, as of June 2020 Avast is still blocking roughly 20 million EternalBlue attacks every month
+and up to a million machines still use the at-risk SMB protocol. There are further concerns of new threats as a result of the leak,
+the most dangerous dubbed as EternalRocks which uses multiple exploits to infect systems. <br><br><br></p>
+<h2>Mitigation <br><br></h2>
+<p>There are steps that can be taken to prevent similar situations from occurring in the future. Since the EnternalBlue leak,
+Microsoft has attempted to rally the NSA and other government bodies to back a Digital Geneva Convention, calling for an end
+to the nation state stockpiling of vulnerabilities. The increasing scale and scope of cyber-attacks and their
+capacity to affect the safety and security of civilian life highlights the need for international law to be modernized. Although it
+should be expected that individuals and organizations consider their digital safety as a priority and do their best to protect their
+systems, perhaps more can be done from a regulatory perspective to reign in state backed threats.<br><br></p>
+<p>One of the important ways to remain protected from vulnerabilities such as EternalBlue, is to keep systems up to date.
+Microsoft deployed a security patch to Windows users almost a month before the exploit was leaked, nevertheless a significant
+number of devices are still not updated. If for some reason updating a system is not possible, another less practical strategy for
+protecting against EternalBlue would be to disable the SMB protocol and refrain from connecting the machine to the internet.<br><br></p>
+<p>As the WannaCry ransomware leveraged the EternalBlue and DoublePulsar exploits, updating devices to the latest version of
+Windows is still the best way to avoid infection. Another useful mitigation technique is to disable all unnecessary protocols. The
+SMB setting is enabled on many machines, but ultimately is not needed by the majority. Disabling SMB and other
+communication protocols if they are not in use is a good way to stop the rapid spread of this kind of malware. Network
+segmentation, splitting the network into subsets, can also greatly improve security and such precautions can prevent an
+outbreak from spreading, thus reducing exposure of essential systems. <br><br></p>
+<p>Creating destruction resistant backups of critical systems and data is also a crucial part of recovering against an attack. Isolating
+or retiring computers that cannot be patched and the immediate deployment of security updates for the operating system,
+browser and core applications where possible is integral to protecting any network. For malware such as NotPetya, which used a
+Mimikatz based method to steal credentials, it is wise to implement unique local admin passwords and separate and protect
+privileged accounts.<br><br><br></p>
+<h2>Security Issues Within a Lan/Wan Environment <br><br></h2>
+<p>Local area networks and wide area
+networks both suffer from various
+security issues and steps can be taken to
+harden defenses and mitigate from
+serious disruption of service. <br><br></p>
+<p>LAN is typically more secure by default,
+as it is used by a single organization or
+department and is local with its
+resources managed in-house. Typically,
+malware is introduced accidentally via a
+phishing scheme or by connecting a
+compromised device to the network.
+Enforcing rigorous security policies and
+procedures for those with physical access to equipment and ensuring that users do not have unnecessary permissions can
+provide a good layer of security. LANs will connect via a central router, remaining vigilant and changing router
+admin credentials regularly along with strict firewall filters, strong encryption and a VPN are all good measures to consider.<br><br></p>
+<p>Linking LANs in different locations, known as a WAN, requires connecting to either the public internet or a dedicated connection.
+This makes it more difficult to control as individuals and organizations cannot guarantee what protections have been made to
+third party systems, it essentially adds more threats on top of those that already exist in a LAN only environment. The use of a
+VPN is a popular way to create a secure connection between locations, when there is a need to rely on public or third party
+infrastructure it ensures that data is encrypted as it travels. <br><br></p>
+<p>With software defined WAN and
+networking, security is moved from
+centralized firewalls and switches to edge
+locations. As more employees work from
+home and operate from less traditional
+locations, security is becoming a more
+challenging prospect. SD-WAN goes from a
+single strong firewall to each user being
+provisioned for independently, using a more
+flexible security profile. It negates the need
+for expensive hardware centric approaches
+and instead opts for a software based
+solution.  <br><br><br></p>
+<h2>Summary <br><br></h2>
+<p>We are now so accustomed to digital technologies that often we use our phones and computers as an extension of ourselves,
+without much thought behind how it works. We have accepted devices into our lives that collect and transfer huge amounts of
+very personal and sensitive information, some of these devices and systems manage many critical aspects of society.
+Unfortunately there will always be groups that attempt to capitalize on weakness, it will take significant efforts to combat these
+threats to our privacy, security and public services. With the right measures and by promoting best practices to individuals and
+organizations, we can limit the damage that can be done by APTs. <br><br></p>
+ </article>
+    </div>
+</div>
+<nav>
+    <a href="/">&#10229;</a>
+</nav>
+
+<script>
+    window.onload = function() {
+        document.getElementById('blog').className='underline-perm';
+    };
+</script>
+                </div>
+            </div>
+        </div>
+        <script>
+
+            function openMenu() {
+
+                var x = document.getElementById("left-panel");
+                var y = document.getElementById("links");
+                var z = document.getElementById("social-links");
+
+                if (y.style.display === "block") {
+                    y.style.display = "none";
+                    z.style.display = "none";
+                    x.style.height = "80px";
+                    x.style.transition = ".3s ease-in"; 
+                } else {
+                    y.style.display = "block";
+                    z.style.display = "flex";
+                    x.style.height = "400px";
+                    x.style.transition = "0s"; 
+                }
+            }
+
+            function checkScreen(a) {
+
+                var x = document.getElementById("left-panel");
+                var y = document.getElementById("links");
+                var z = document.getElementById("social-links");
+                
+                if (a.matches) {
+                    
+                    y.style.display = "block";
+                    z.style.display = "flex";
+                    x.style.height = "90vh";
+
+                } else {
+
+                    y.style.display = "none";
+                    z.style.display = "none";
+                    x.style.height = "80px";
+                }
+            }
+
+            var a = window.matchMedia("(min-width: 1024px) and (min-height: 769px)");
+            checkScreen(a);
+            a.addListener(checkScreen);
+
+        </script>
+    </body>
+
+</html>

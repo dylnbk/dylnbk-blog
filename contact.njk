@@ -1,0 +1,35 @@
+---
+title: dylnbk.page
+layout: layouts/base.njk
+---
+<div class="post-panel-front">
+    <div class="contact">
+        <form name="contact" autocomplete="off" method="POST" data-netlify="true" action="/success/index.html">
+            <p>
+                <h2><label>Name: </label></h2>
+                <input class="name" type="text" name="name" autocomplete="off"></input>
+            </p>
+            <p>
+                <h2><label>Email: </label></h2>
+                <input class="email" type="email" name="email" role="presentation" autocomplete="off" required></input>
+            </p>
+            <p>
+                <h2><label>Message: </label></h2>
+                <textarea class="message" name="message" required></textarea>
+            </p>
+
+            <p>
+                <button class="btncontact" type="submit">✉</button>
+            </p>
+            
+        </form>
+    </div>
+
+</div>
+
+
+<script>
+    window.onload = function() {
+        document.getElementById('contact').className='underline-perm';
+    };
+</script>

@@ -1,0 +1,172 @@
+---
+layout: layouts/post.njk
+title: Purpose and Function of Firewalls
+description: Reasons for using a firewall & different types of firewall technologies.
+date: 2022-11-03T23:00:00.000Z
+featuredImage: /media/uploads/wall.jpg
+---
+
+## <br>Introduction <br><br>
+
+The internet as we know it has developed into an extremely complex
+network, with many of our key services and infrastructure reliant on the ability to communicate online. An extraordinary
+amount of sensitive information lives on systems that are connected to the internet and like any valuable resource, there is a great
+need for it to be kept safe. Security considerations such as a firewall, whether for personal use or at an organizational level, are
+essential. <br><br>
+
+
+As our physical and digital life becomes further entwined, we are increasingly governed by a myriad of unseen rules and permissions.
+Every time we open one of our electronic devices, we trust that the outside connections it makes are free from danger. The
+organizations which provide the various services that we interact with have a considerable challenge in maintaining and mitigating
+threats for its clients. Firewall technology has vastly improved since its inception in the late 1980s, this article aims to critically evaluate
+and reflect on the various types of firewalls that are used in the industry and their purpose, while considering the principles of
+organizational structure and network security. <br><br><br>
+
+
+## Purpose of a Firewall <br><br>
+
+The rationale behind installing a firewall is generally to help protect a private system
+against intrusion, preventing unauthorized users from acquiring
+proprietary information. It should analyse and filter traffic between
+networks and external devices, halting any illegal behaviours before they gain unwanted
+entry to the destination host. When connecting a device directly to the
+internet or other networks, it allows outsiders free access to the system. A firewall can be
+considered as a gatekeeper between networks, devices and the outside world. It should
+keep out threats, monitor connections and issue alerts regarding any suspicious activity. <br><br>
+
+
+Cyber security needs various layers of defence and firewalls have an important part to
+play within well-guarded organizational structures. As security threats continue to
+advance in capabilities, demand has grown for establishments to develop their security
+operations centres. There are lots of methods available to implement a capable set of
+security protocols, however making certain that a layered approach is used will ensure
+that if a particular defence measure fails, another will help prevent an attack. <br><br>
+
+
+Increasingly we are seeing that traditional centralized and hierarchical organizations are
+transforming into more loosely coupled networks. They are often characterized by
+cooperation instead of control, with frequent sharing of information and high levels of
+inter-connectivity. Many organizations are now location and structure independent; they
+have become transnational networks that operate across various boundaries and barriers. Remote
+working is becoming common place and will likely remain a huge part of the general workforce. As homes transform into workplaces,
+users lack the protections that their office network provided. Many people are using their own devices for two factor authentication,
+sharing applications and data, blurring the line between personal and professional life. Even with our rapidly changing
+environment, firewalls will remain a vital part of security department toolkits. Many organizations are reconsidering their existing
+deployments and looking towards integrating cloud based solutions. These options normally offer the same features afforded by
+hardware and physical security measures, creating a virtual barrier that filters out malicious traffic and protects an organizations
+internal network. <br><br><br>
+
+## Types of Firewall Technologies <br><br>
+
+Firewall technology provides a mechanism to enforce access policies on traffic entering or leaving networks. Generally, an internal
+network is protected against an external untrusted network, or parts of a network are protected against each other. Security policies
+are typically a set of rules, each explicitly or implicitly allowing or denying data to travel through the firewall based on the
+interpretation of the contents. Different types of firewalls operate on various layers of data abstraction: network layer (packet
+filtering), transport layer (circuit level) and application layer (application level). <br><br>
+
+
+### - Packet Filtering <br><br>
+
+One of the core purposes and most widely used features of a firewall is packet filtering. When devices send communications, the
+information travels in small packets of data over various networks until it reaches its destination. A firewall will monitor the source of
+the packet, its destination and what type of data it holds. It can be configured to allow, block or take different actions based on an
+internal rule set. Packet filters implement a complex functionality that is beyond the scope of this report, nonetheless some of the key
+individual properties include: header inspection, application inspection, stateful filtering, dynamic filtering and buffering strategies.
+Basic filters will either stop or forward the packet, but more advanced filters offer a wider range of actions such as rejection, reflection,
+logging and modification. <br><br>
+
+![Firewall](/media/uploads/Firewall.png) <br><br>
+
+The above shows basic packet filtering, which although is very fast it does have some drawbacks. It can be easily misconfigured, there are
+often conflicts or missing rules within an organisations security policy. Packet filtering alone is considered quite basic, it cannot truly
+determine which user is responsible for traffic and lacks any advanced authentication schemes. Because packet filters do not examine
+upper-layer data, logging functionality is limited, and application specific vulnerabilities cannot be prevented. At
+first, packet filters did not monitor the state of a connection. Users had the ability to send packets that appeared to be part of an
+established connection, this flaw enabled remote attackers to gain entry and map local networks as if there were no firewall. The
+solution was to keep track of a connections state, this is commonly known as a packet inspection, stateful firewalls or adaptive
+firewalling. Essentially, this method of filtering can look at both the network layer and the transport layer. <br><br>
+
+
+### - Circuit Level <br><br>
+
+Circuit level firewalls operate at the transport layer and check the validity of connections against a list of rules before establishing a
+session and exchanging data. The permissions defining a valid session can include which ports are being accessed, timestamps, the
+protocol being used and credentials such as account names and passwords. Once a session has been opened, no further packet checks
+are required. Such gateways can utilize detailed access control mechanisms, they can act as a proxy and have similar
+advantages as application level systems by obfuscating the internal host from the serving host while using a smaller processing
+footprint. They can be used within application level configurations or as a standalone system. Disadvantages include a lack of content
+filtering and a requirement that programs must be modified in order to use circuit level proxies. Although only minor changes are
+necessary, the distribution of programs, availability of source code and the education of users can make it challenging to implement. <br><br>
+
+
+### - Application Level <br><br>
+
+
+As the name implies, application level firewalls examine packets at the application layer before accepting a connection. It allows for
+security items such as user credentials and service requests that surface in the application layer to be validated by the firewall, and
+generally it includes specialised software and proxy services that manage traffic for specific protocols such as FTP and HTTP. This
+technology offers increased control and comprehensive checks on data. Based on configuration, the proxy can provide other functions
+like authentication logging, URL filtering, data modification and HTTP object caching. Proxy services are implemented at the edge of the
+network stack, they are slower than packet filtering techniques as each packet is thoroughly examined. Following detailed inspection of
+the packet header and data, it will continue down the network stack provided that no threat has been identified. <br><br>
+
+
+These types of firewalls are primarily used as an enhancement to a packet filtering firewall, providing services up to the application
+layer. It can be set up to control the execution of programs, handle data and block malicious code. This could be network based,
+scanning and monitoring traffic destined for the application layer or a specific service. It could also be host based, monitoring the
+connections initiated by an application on a local system. When using proxy services access can be controlled and
+packet data processed and manipulated, while shielding internal IP address and network topology. Although application level firewalls
+provide increased security, they are slower and more difficult to scale up. They require extensive support and can be vulnerable to
+bugs within applications and operating systems. <br><br>
+
+
+### - Distributed <br><br>
+
+
+Firewalls are typically located in a centralised fashion; they can become a single point of failure as well as causing performance
+bottlenecks. With a distributed firewall, the network admin loads a policy to all machines. Each host runs their own local firewall and
+implements the policy, the machines can be identified using cryptographic certifications. It completely avoids a single central firewall
+and removes the binding from the physical structure. Various methodologies exist for distributed techniques, including the parallel use
+of an intrusion detection system. The most significant issue with their implementation is that they rely heavily on users not to override
+the policy, there must be uniform enforcement of the rules for communications to be transmitted securely. <br><br>
+
+
+### - Next Generation <br><br>
+
+
+Next generation firewalls are often referred to as ‘deep packet inspection’. They are able to block more modern threats such as
+advanced malware and application level exploits. Methods include packet filtering, direct control of applications and
+signature based whitelisting of services. This technology can determine if an email contains attachments that are not permitted, block
+specific web content such as Active X, Java or invalid SSL certifications. It improves standard state inspection by adding intrusion
+detection systems; an engine that analyses the network, capturing and reporting any potentially malicious incidents.
+Due to the in depth examination of packets, this type of firewall suffers from using more system resources and being slower than
+streamlined alternatives. <br><br>
+
+
+### - Host & Personal <br><br>
+
+
+These types of firewalls allow for more granular protection and gives users an additional layer of security. They are software based and
+reside on the device that they are protecting, monitoring the traffic for a single host. Generally, host firewalls are available as part of a
+server operating system and can be configured to give protection against all kinds of activity, including connections on the same subnet
+or internal networks. They can often act as intrusion prevention systems, if an attack happens it will attempt to halt the threat and
+prevent damage to the targeted host. For personal firewalls, a more user friendly interface is offered and it can be easily set up for
+different types of locations and networks. It is commonly packaged with antimalware programs and various security utilities that can
+help limit the spread of malware and regulate the use of unauthorised software. <br><br><br>
+
+## Summary <br><br>
+
+Individuals and organisations use various layers of security to protect their systems. Firewalls, virus scanning, intrusion detection
+systems and various other protective software offers some levels of assurance that their computers and data is safe. The internet is
+very much a vital part of modern life, yet the internet was formed using an architecture that was not designed with security first in
+mind. Many of the regularly used protocols are inherently insecure, so a balance must be found between accessibility and security. <br><br>
+
+Firewalls are widely deployed and a staple of most computer and network defences. When used correctly, they can provide excellent
+levels of protection against todays digital landscape. Configuring and implementing the right rule set for an organisation or individual is
+key to remaining safe and sufficiently controlling access to a network. Originally built and set up by experts, firewalls are now a
+commercial product sold with simplified interfaces that give a false sense of ease and the idea that anybody can manage their networks
+security. Every organisation that is connected to the internet has a form of firewall, resulting in some level of protection from outside
+threats. Attackers now regularly focus on home users and insiders, with remote working more prevalent it will be unsurprising to see a
+shift to more distributed services. <br><br>
+
+<strong>“There are no solutions, there are only trade-offs; you try to get the best trade-off you can, that’s all you can hope for (Sowell, 1987).” </strong><br><br>
