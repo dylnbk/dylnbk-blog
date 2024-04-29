@@ -167,15 +167,15 @@ individuals must adapt and implement solid security practices themselves. <br><b
                 var y = document.getElementById("links");
                 var z = document.getElementById("social-links");
 
-                if (y.style.display === "block") {
+                if (y.style.display === "flex") {
                     y.style.display = "none";
                     z.style.display = "none";
-                    x.style.height = "80px";
+                    x.style.height = "90px";
                     x.style.transition = ".3s ease-in"; 
                 } else {
-                    y.style.display = "block";
+                    y.style.display = "flex";
                     z.style.display = "flex";
-                    x.style.height = "400px";
+                    x.style.height = "100dvh";
                     x.style.transition = "0s"; 
                 }
             }
@@ -196,7 +196,7 @@ individuals must adapt and implement solid security practices themselves. <br><b
 
                     y.style.display = "none";
                     z.style.display = "none";
-                    x.style.height = "80px";
+                    x.style.height = "90px";
                 }
             }
 
